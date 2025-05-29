@@ -1,1 +1,5 @@
 services:
+    traffic-generator:
+        build: .
+        ports:
+          - "9092:9092"
