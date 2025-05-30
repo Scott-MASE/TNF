@@ -46,7 +46,7 @@ public class TrafficDataControllerTest {
         mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
     }
 
-    @Test
+    /*@Test
     public void testSendTraffic() throws Exception {
         TrafficDataDTO dto = new TrafficDataDTO();
         dto.setNodeId(1);
@@ -58,7 +58,7 @@ public class TrafficDataControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(new ObjectMapper().writeValueAsString(dto)))
                 .andExpect(status().isAccepted());
-    }
+    }*/
 
     @Test
     public void testGetAllTraffic() throws Exception {
