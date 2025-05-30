@@ -19,8 +19,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AnomalyDetection" options="" />
-      <module name="TrafficSimulator" options="-parameters" />
-      <module name="UIAndRest" options="-parameters" />
+      <module name="TrafficSimulator" options="" />
+      <module name="UIAndRest" options="" />
     </option>
   </component>
 </project>
