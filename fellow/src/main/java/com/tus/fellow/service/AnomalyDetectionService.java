@@ -81,13 +81,11 @@ public class AnomalyDetectionService {
     
     private boolean isSuddenDrop(TrafficData data) {
         // Compare with the previous traffic data to detect sudden drops
-    	//logger.info("************** SuddenDrop:"+data.getTrafficVolume()+(data.getTrafficVolume()<100));
         return data.getTrafficVolume() < 100; // Just an example, adjust the logic
     }
 
     private boolean isSuddenSpike(TrafficData data) {
         // Compare with the previous traffic data to detect sudden spikes
-    	//logger.info("************* SuddenSPIKE:"+data.getTrafficVolume()+(data.getTrafficVolume()>3000));
         return data.getTrafficVolume() > 3000; // Just an example, adjust the logic
     }
 

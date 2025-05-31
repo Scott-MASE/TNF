@@ -31,7 +31,7 @@ import com.tus.fellow.repository.TrafficDataRepository;
 
 // MockMVC Test for Controller
 @WebMvcTest(TrafficDataController.class)
-public class TrafficDataControllerTest {
+class TrafficDataControllerTest {
 
     @MockBean
     private TrafficDataRepository trafficRepo;
@@ -69,7 +69,7 @@ public class TrafficDataControllerTest {
     }*/
 
     @Test
-    public void testGetAllTraffic() throws Exception {
+    void testGetAllTraffic() throws Exception {
         TrafficData data = new TrafficData();
         data.setNodeId(1);
         data.setNetworkId(2);
@@ -83,7 +83,7 @@ public class TrafficDataControllerTest {
     }
 
     @Test
-    public void testGetTrafficById() throws Exception {
+    void testGetTrafficById() throws Exception {
         TrafficData data = new TrafficData();
         data.setId(1L);
         data.setNodeId(1);

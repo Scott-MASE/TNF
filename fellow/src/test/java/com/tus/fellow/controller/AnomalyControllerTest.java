@@ -21,7 +21,7 @@ import com.tus.fellow.entity.AnomalyType;
 import com.tus.fellow.repository.AnomalyRepository;
 
 @WebMvcTest(AnomalyController.class)
-public class AnomalyControllerTest {
+class AnomalyControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -30,7 +30,7 @@ public class AnomalyControllerTest {
     private AnomalyRepository anomalyRepo;
 
     @Test
-    public void testGetAllAnomalies() throws Exception {
+    void testGetAllAnomalies() throws Exception {
         Anomaly anomaly = new Anomaly();
         anomaly.setId(1L);
         anomaly.setNodeId(100);
@@ -47,7 +47,7 @@ public class AnomalyControllerTest {
     }
 
     @Test
-    public void testGetAnomalyById() throws Exception {
+    void testGetAnomalyById() throws Exception {
         Anomaly anomaly = new Anomaly();
         anomaly.setId(1L);
         anomaly.setNodeId(100);
@@ -64,7 +64,7 @@ public class AnomalyControllerTest {
     }
 
     @Test
-    public void testGetByNetworkId() throws Exception {
+    void testGetByNetworkId() throws Exception {
         Anomaly anomaly = new Anomaly();
         anomaly.setNetworkId(200);
 

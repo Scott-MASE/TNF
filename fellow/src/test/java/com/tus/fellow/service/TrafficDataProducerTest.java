@@ -14,7 +14,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import com.tus.fellow.dto.TrafficDataDTO;
 import com.tus.fellow.kafka.TrafficDataProducer;
 
-public class TrafficDataProducerTest {
+class TrafficDataProducerTest {
 
     @Mock
     private KafkaTemplate<String, TrafficDataDTO> kafkaTemplate;
@@ -29,7 +29,7 @@ public class TrafficDataProducerTest {
     }
 
     @Test
-    public void testSendTrafficData() {
+   void testSendTrafficData() {
         TrafficDataDTO dto = new TrafficDataDTO();
         dto.setNodeId(1);
         dto.setNetworkId(2);

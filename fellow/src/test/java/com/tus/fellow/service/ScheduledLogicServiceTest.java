@@ -17,7 +17,7 @@ import org.mockito.MockitoAnnotations;
 import com.tus.fellow.entity.TrafficData;
 import com.tus.fellow.repository.TrafficDataRepository;
 
-public class ScheduledLogicServiceTest {
+class ScheduledLogicServiceTest {
 
     @Mock
     private TrafficDataRepository trafficDataRepository;
@@ -50,7 +50,7 @@ public class ScheduledLogicServiceTest {
     }
 
     @Test
-    public void testExecuteWithHighTraffic() {
+    void testExecuteWithHighTraffic() {
         // Mock repository to return the traffic data
         when(trafficDataRepository.findRecentTrafficData(any())).thenReturn(Arrays.asList(data1, data2));
 
@@ -61,7 +61,7 @@ public class ScheduledLogicServiceTest {
     }
 
     @Test
-    public void testExecuteWithNormalTraffic() {
+    void testExecuteWithNormalTraffic() {
         // Modify traffic data with normal volume
         data1.setTrafficVolume(500.0);
 
@@ -74,7 +74,7 @@ public class ScheduledLogicServiceTest {
     }
 
     @Test
-    public void testExecuteWhenNoTraffic() {
+    void testExecuteWhenNoTraffic() {
         // Mock empty traffic data
         when(trafficDataRepository.findRecentTrafficData(any())).thenReturn(Arrays.asList());
 

@@ -15,7 +15,7 @@ import com.tus.fellow.entity.TrafficData;
 import com.tus.fellow.kafka.TrafficDataConsumer;
 import com.tus.fellow.repository.TrafficDataRepository;
 
-public class TrafficDataConsumerTest {
+class TrafficDataConsumerTest {
 
     @Mock
     private TrafficDataRepository repository;
@@ -32,7 +32,7 @@ public class TrafficDataConsumerTest {
     }
 
     @Test
-    public void testConsumeTrafficData() {
+    void testConsumeTrafficData() {
         TrafficDataDTO dto = new TrafficDataDTO();
         dto.setNodeId(1);
         dto.setNetworkId(2);

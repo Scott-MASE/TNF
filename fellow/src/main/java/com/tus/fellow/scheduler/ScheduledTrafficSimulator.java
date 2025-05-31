@@ -1,7 +1,7 @@
 package com.tus.fellow.scheduler;
 
+import java.security.SecureRandom;
 import java.time.LocalDateTime;
-import java.util.Random;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -18,9 +18,9 @@ public class ScheduledTrafficSimulator {
 
 	private TrafficDataProducer producer;
 
-    private final Random random = new Random();
+	private final SecureRandom random = new SecureRandom();
 
-    @Scheduled(fixedRate =30000) // Run every 30 seconds
+    @Scheduled(fixedRate =10000) // Run every 10 seconds
     public void simulateTrafficData() {
         TrafficDataDTO data = new TrafficDataDTO();
         data.setNodeId(random.nextInt(5) + 1);            // Node IDs 1 to 5

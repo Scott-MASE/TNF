@@ -69,11 +69,9 @@ public class ScheduledLogicService {
         logger.info("Using threshold {} for current hour {}", currentThreshold, currentHour);
 
         for (TrafficData data : recentTraffic) {
-            //if (data.getTrafficVolume() > currentThreshold) {
         	logger.info("Evaluating traffic: nodeId={}, networkId={}, volume={}, timestamp={}", 
                     data.getNodeId(), data.getNetworkId(), data.getTrafficVolume(), data.getTimestamp());
                 anomalyDetectionService.checkForAnomaly(data);
-            //}
         }
 
         logger.info("Checked {} records for anomalies.", recentTraffic.size());
