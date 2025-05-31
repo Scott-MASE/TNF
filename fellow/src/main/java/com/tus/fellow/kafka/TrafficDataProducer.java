@@ -11,11 +11,16 @@ import com.tus.fellow.dto.TrafficDataDTO;
 public class TrafficDataProducer {
     @Autowired
     private KafkaTemplate<String, TrafficDataDTO> kafkaTemplate;
+    
+   
 
     @Value("${kafka.topic.traffic}")
     private String trafficTopic;
-
+    
+   
     public void sendTrafficData(TrafficDataDTO data) {
         kafkaTemplate.send(trafficTopic, data);
     }
+    
+   
 }

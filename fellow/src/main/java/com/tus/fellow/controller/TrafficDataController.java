@@ -2,6 +2,7 @@ package com.tus.fellow.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ import com.tus.fellow.kafka.TrafficDataProducer;
 import com.tus.fellow.repository.TrafficDataRepository;
 
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
@@ -36,6 +37,7 @@ public class TrafficDataController {
  @ApiResponse(responseCode = "202", description = "Accepted")
  @PostMapping
  public ResponseEntity<Void> sendTraffic(@RequestBody TrafficDataDTO data) {
+	 System.out.println("MY DATA THROUGH POST^^^^^^^^^^^^^^:"+data.getNodeId()+"::"+data.getNetworkId()+"::"+data.getTrafficVolume());
      producer.sendTrafficData(data);
      return ResponseEntity.accepted().build();
  }

@@ -20,12 +20,13 @@ public class TrafficDataConsumer {
 
  @KafkaListener(topics = "${kafka.topic.traffic}", groupId = "traffic-group")
  public void consumeTrafficData(TrafficDataDTO data) {
+	 System.out.println("Kafka message received: " + data);
      TrafficData entity = new TrafficData();
      entity.setNodeId(data.getNodeId());
      entity.setNetworkId(data.getNetworkId());
      entity.setTrafficVolume(data.getTrafficVolume());
      entity.setTimestamp(data.getTimestamp());
      repository.save(entity);
-     anomalyService.checkForAnomaly(entity);
+     //anomalyService.checkForAnomaly(entity);
  }
 }
