@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.tus.fellow.entity.Anomaly;
+import com.tus.fellow.entity.AnomalyType;
 import com.tus.fellow.entity.TrafficData;
 import com.tus.fellow.repository.AnomalyRepository;
 
@@ -30,24 +31,59 @@ public class AnomalyDetectionService {
 
     public void checkForAnomaly(TrafficData data) {
         double currentThreshold = isDayTime() ? dayThreshold : nightThreshold;
-
+        
+     // Detecting various anomalies
         if (data.getTrafficVolume() > currentThreshold) {
-            Anomaly anomaly = new Anomaly();
-            anomaly.setNodeId(data.getNodeId());
-            anomaly.setNetworkId(data.getNetworkId());
-            anomaly.setTrafficVolume(data.getTrafficVolume());
-            anomaly.setAnomalyType("High Traffic Volume");
-            anomaly.setTimestamp(data.getTimestamp());
-            boolean exists = anomalyRepository.existsByNodeIdAndNetworkIdAndTimestamp(data.getNodeId(), data.getNetworkId(), data.getTimestamp());
-            if (!exists) {
-                anomalyRepository.save(anomaly);
-            }
+            createAnomaly(data, AnomalyType.HIGH_TRAFFIC_VOLUME);
+        }
+        
+        if (data.getTrafficVolume() == 0) {
+            createAnomaly(data, AnomalyType.ZERO_TRAFFIC);
+        }
 
+        if (isSuddenDrop(data)) {
+            createAnomaly(data, AnomalyType.SUDDEN_DROP);
+        }
+
+        if (isSuddenSpike(data)) {
+            createAnomaly(data, AnomalyType.SUDDEN_SPIKE);
+        }
+
+        if (isUnusualNightTraffic(data)) {
+            createAnomaly(data, AnomalyType.UNUSUAL_NIGHT_TRAFFIC);
+        }
+
+    }
+    private void createAnomaly(TrafficData data, AnomalyType anomalyType) {
+        Anomaly anomaly = new Anomaly();
+        anomaly.setNodeId(data.getNodeId());
+        anomaly.setNetworkId(data.getNetworkId());
+        anomaly.setTrafficVolume(data.getTrafficVolume());
+        anomaly.setAnomalyType(anomalyType);
+        anomaly.setTimestamp(data.getTimestamp());
+
+        boolean exists = anomalyRepository.existsByNodeIdAndNetworkIdAndTimestamp(data.getNodeId(), data.getNetworkId(), data.getTimestamp());
+        if (!exists) {
+            anomalyRepository.save(anomaly);
         }
     }
 
-    private boolean isDayTime() {
+    public boolean isDayTime() {
         LocalTime now = LocalTime.now();
         return now.isAfter(LocalTime.of(6, 0)) && now.isBefore(LocalTime.of(18, 0));
+    }
+    
+    private boolean isSuddenDrop(TrafficData data) {
+        // Compare with the previous traffic data to detect sudden drops
+        return data.getTrafficVolume() < 100; // Just an example, adjust the logic
+    }
+
+    private boolean isSuddenSpike(TrafficData data) {
+        // Compare with the previous traffic data to detect sudden spikes
+        return data.getTrafficVolume() > 3000; // Just an example, adjust the logic
+    }
+
+    private boolean isUnusualNightTraffic(TrafficData data) {
+        return !isDayTime() && data.getTrafficVolume() > nightThreshold;
     }
 }

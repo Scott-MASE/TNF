@@ -21,8 +21,11 @@ public class TrafficData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     private Integer nodeId;
+    
     private Integer networkId;
+    
     private Double trafficVolume;
 
     @Column(name = "datetime")

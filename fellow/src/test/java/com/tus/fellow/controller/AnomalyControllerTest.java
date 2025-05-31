@@ -17,6 +17,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.tus.fellow.entity.Anomaly;
+import com.tus.fellow.entity.AnomalyType;
 import com.tus.fellow.repository.AnomalyRepository;
 
 @WebMvcTest(AnomalyController.class)
@@ -34,7 +35,7 @@ public class AnomalyControllerTest {
         anomaly.setId(1L);
         anomaly.setNodeId(100);
         anomaly.setNetworkId(200);
-        anomaly.setAnomalyType("High Traffic Volume");
+        anomaly.setAnomalyType(AnomalyType.HIGH_TRAFFIC_VOLUME);
         anomaly.setTrafficVolume(1500.0);
         anomaly.setTimestamp(LocalDateTime.now());
 
@@ -51,7 +52,7 @@ public class AnomalyControllerTest {
         anomaly.setId(1L);
         anomaly.setNodeId(100);
         anomaly.setNetworkId(200);
-        anomaly.setAnomalyType("High Traffic Volume");
+        anomaly.setAnomalyType(AnomalyType.HIGH_TRAFFIC_VOLUME);
         anomaly.setTrafficVolume(1500.0);
         anomaly.setTimestamp(LocalDateTime.now());
 
