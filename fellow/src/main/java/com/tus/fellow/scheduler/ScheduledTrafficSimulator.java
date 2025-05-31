@@ -1,19 +1,22 @@
 package com.tus.fellow.scheduler;
 
-import com.tus.fellow.dto.TrafficDataDTO;
-import com.tus.fellow.kafka.TrafficDataProducer;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.time.LocalDateTime;
+import java.util.Random;
+
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
-import java.util.Random;
+import com.tus.fellow.dto.TrafficDataDTO;
+import com.tus.fellow.kafka.TrafficDataProducer;
 
 @Service
 public class ScheduledTrafficSimulator {
 
-    @Autowired
-    private TrafficDataProducer producer;
+    public ScheduledTrafficSimulator(TrafficDataProducer producer) {
+		this.producer = producer;
+	}
+
+	private TrafficDataProducer producer;
 
     private final Random random = new Random();
 

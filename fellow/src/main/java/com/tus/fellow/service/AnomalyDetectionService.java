@@ -1,12 +1,13 @@
 package com.tus.fellow.service;
 
-import com.tus.fellow.entity.Anomaly;
-import com.tus.fellow.entity.TrafficData;
-import com.tus.fellow.repository.AnomalyRepository;
+import java.time.LocalTime;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalTime;
+import com.tus.fellow.entity.Anomaly;
+import com.tus.fellow.entity.TrafficData;
+import com.tus.fellow.repository.AnomalyRepository;
 
 @Service
 public class AnomalyDetectionService {
@@ -37,7 +38,11 @@ public class AnomalyDetectionService {
             anomaly.setTrafficVolume(data.getTrafficVolume());
             anomaly.setAnomalyType("High Traffic Volume");
             anomaly.setTimestamp(data.getTimestamp());
-            anomalyRepository.save(anomaly);
+            boolean exists = anomalyRepository.existsByNodeIdAndNetworkIdAndTimestamp(data.getNodeId(), data.getNetworkId(), data.getTimestamp());
+            if (!exists) {
+                anomalyRepository.save(anomaly);
+            }
+
         }
     }
 

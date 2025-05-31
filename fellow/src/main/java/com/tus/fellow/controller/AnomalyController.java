@@ -2,7 +2,6 @@ package com.tus.fellow.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,10 +20,13 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @Tag(name = "Anomalies", description = "Anomaly API")
 public class AnomalyController {
 
-    @Autowired
     private AnomalyRepository anomalyRepo;
 
-    @Operation(summary = "Get all anomalies")
+    public AnomalyController(AnomalyRepository anomalyRepo) {
+		this.anomalyRepo = anomalyRepo;
+	}
+
+	@Operation(summary = "Get all anomalies")
     @ApiResponse(responseCode = "200", description = "OK")
     @GetMapping
     public List<Anomaly> getAllAnomalies() {

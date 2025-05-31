@@ -27,11 +27,14 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @Tag(name = "Traffic Data", description = "Traffic Data API")
 public class TrafficDataController {
 
- @Autowired
  private TrafficDataRepository trafficRepo;
-
- @Autowired
+ 
  private TrafficDataProducer producer;
+
+ public TrafficDataController(TrafficDataRepository trafficRepo, TrafficDataProducer producer) {
+	this.trafficRepo = trafficRepo;
+	this.producer = producer;
+}
 
  @Operation(summary = "Send traffic data (via Kafka)")
  @ApiResponse(responseCode = "202", description = "Accepted")
