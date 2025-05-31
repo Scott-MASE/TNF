@@ -8,7 +8,6 @@ import static org.mockito.Mockito.verify;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -22,12 +21,12 @@ public class AnomalyDetectionServiceTest {
     @Mock
     private AnomalyRepository anomalyRepository;
 
-    @InjectMocks
     private AnomalyDetectionService anomalyService;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);
+        anomalyService = new AnomalyDetectionService(anomalyRepository, 1000.0, 500.0); // Inject mock thresholds
     }
 
     @Test

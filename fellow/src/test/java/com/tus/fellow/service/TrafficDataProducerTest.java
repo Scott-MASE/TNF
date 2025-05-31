@@ -25,6 +25,7 @@ public class TrafficDataProducerTest {
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
+        producer = new TrafficDataProducer(kafkaTemplate, "test-topic"); 
     }
 
     @Test

@@ -13,15 +13,19 @@ public class AnomalyDetectionService {
 
     private final AnomalyRepository anomalyRepository;
 
-    @Value("${traffic.threshold.day}")
+    //@Value("${traffic.threshold.day}")
     private double dayThreshold;
 
-    @Value("${traffic.threshold.night}")
+    //@Value("${traffic.threshold.night}")
     private double nightThreshold;
 
-    public AnomalyDetectionService(AnomalyRepository anomalyRepository) {
-        this.anomalyRepository = anomalyRepository;
-    }
+    public AnomalyDetectionService(AnomalyRepository anomalyRepository,
+            @Value("${traffic.threshold.day}") double dayThreshold,
+            @Value("${traffic.threshold.night}") double nightThreshold) {
+		this.anomalyRepository = anomalyRepository;
+		this.dayThreshold = dayThreshold;
+		this.nightThreshold = nightThreshold;
+	}
 
     public void checkForAnomaly(TrafficData data) {
         double currentThreshold = isDayTime() ? dayThreshold : nightThreshold;
