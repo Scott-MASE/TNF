@@ -18,7 +18,7 @@ public class TrafficScheduler {
         this.service = service;
     }
 
-    @Scheduled(fixedRate = 300000) // every 5 min
+    @Scheduled(fixedRate = 60000) // every 1 min
     public void runScheduledTask() {
         if (schedulerEnabled) {
             service.execute();

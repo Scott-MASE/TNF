@@ -2,6 +2,8 @@ package com.tus.fellow.service;
 
 import java.time.LocalTime;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,8 @@ import com.tus.fellow.repository.AnomalyRepository;
 
 @Service
 public class AnomalyDetectionService {
+
+	private static final Logger logger = LoggerFactory.getLogger(AnomalyDetectionService.class);
 
     private final AnomalyRepository anomalyRepository;
 
@@ -37,7 +41,9 @@ public class AnomalyDetectionService {
             createAnomaly(data, AnomalyType.HIGH_TRAFFIC_VOLUME);
         }
         
-        if (data.getTrafficVolume() == 0) {
+        if (Double.compare(data.getTrafficVolume(), 0.0) == 0) {
+        	logger.info("AnomalyDetectionService traffic: nodeId={}, networkId={}, volume={}, timestamp={}", 
+                    data.getNodeId(), data.getNetworkId(), data.getTrafficVolume(), data.getTimestamp());
             createAnomaly(data, AnomalyType.ZERO_TRAFFIC);
         }
 
@@ -75,11 +81,13 @@ public class AnomalyDetectionService {
     
     private boolean isSuddenDrop(TrafficData data) {
         // Compare with the previous traffic data to detect sudden drops
+    	//logger.info("************** SuddenDrop:"+data.getTrafficVolume()+(data.getTrafficVolume()<100));
         return data.getTrafficVolume() < 100; // Just an example, adjust the logic
     }
 
     private boolean isSuddenSpike(TrafficData data) {
         // Compare with the previous traffic data to detect sudden spikes
+    	//logger.info("************* SuddenSPIKE:"+data.getTrafficVolume()+(data.getTrafficVolume()>3000));
         return data.getTrafficVolume() > 3000; // Just an example, adjust the logic
     }
 

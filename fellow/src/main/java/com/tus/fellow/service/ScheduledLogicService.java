@@ -51,7 +51,8 @@ public class ScheduledLogicService {
 
         // Cleanup stale records
         List<TrafficData> staleRecords = trafficDataRepository.findAll().stream()
-                .filter(data -> data.getTrafficVolume() == 0 || data.getTimestamp().isBefore(LocalDateTime.now().minusDays(30)))
+        		.filter(data -> data.getTimestamp().isBefore(LocalDateTime.now().minusDays(30)))
+                //.filter(data -> data.getTrafficVolume() == 0 || data.getTimestamp().isBefore(LocalDateTime.now().minusDays(30)))
                 .toList();
         if (!staleRecords.isEmpty()) {
             trafficDataRepository.deleteAll(staleRecords);
@@ -68,9 +69,11 @@ public class ScheduledLogicService {
         logger.info("Using threshold {} for current hour {}", currentThreshold, currentHour);
 
         for (TrafficData data : recentTraffic) {
-            if (data.getTrafficVolume() > currentThreshold) {
+            //if (data.getTrafficVolume() > currentThreshold) {
+        	logger.info("Evaluating traffic: nodeId={}, networkId={}, volume={}, timestamp={}", 
+                    data.getNodeId(), data.getNetworkId(), data.getTrafficVolume(), data.getTimestamp());
                 anomalyDetectionService.checkForAnomaly(data);
-            }
+            //}
         }
 
         logger.info("Checked {} records for anomalies.", recentTraffic.size());
