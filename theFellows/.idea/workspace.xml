@@ -5,21 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/repository/AnomalyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/repository/TrafficDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AnomalyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/TrafficDataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/repositories/AnomalyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/repositories/TrafficDataRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/AnomalyDetectionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/AnomalyDetectionApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/kafka/TrafficDataConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/kafka/TrafficDataConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/service/AnomalyDetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/service/AnomalyDetectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/service/ScheduledLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/service/ScheduledLogicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/service/ScheduledLogicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/service/ScheduledLogicService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/UiAndRestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/UiAndRestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +64,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AnomalyDetectionApplication.executor": "Run",
     "Spring Boot.TrafficSimulatorApplication.executor": "Run",
-    "git-widget-placeholder": "merge__arch",
+    "git-widget-placeholder": "development",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/scott/Documents/GitHub/TNF/theFellows/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler",
+    "last_opened_file_path": "/Users/scott/Documents/GitHub/TNF/theFellows/UIAndRest/src/main/java/com/tus/uiandrest/controllers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,15 +78,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers" />
       <recent name="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler" />
       <recent name="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/entities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tus.uiandrest.repositories" />
       <recent name="com.tus.anomalydetection.repository" />
       <recent name="com.tus.common.entity" />
       <recent name="com.tus.anomalydetection.service" />
       <recent name="com.tus.anomalydetection.kafka" />
-      <recent name="com.tus.common.dto" />
     </key>
   </component>
   <component name="RunDashboard">
