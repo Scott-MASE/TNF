@@ -17,7 +17,7 @@ public class ScheduledTrafficSimulator {
 
     private final Random random = new Random();
 
-    @Scheduled(fixedRate =30000) // Run every 30 seconds
+    @Scheduled(fixedRate =5000) // Run every 30 seconds
     public void simulateTrafficData() {
         TrafficDataDTO data = new TrafficDataDTO();
         data.setNodeId(random.nextInt(5) + 1);            // Node IDs 1 to 5
