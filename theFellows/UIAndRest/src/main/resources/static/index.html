@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Traffic Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+            <div class="position-sticky pt-3">
+                <div class="text-center mb-4">
+                    <h4 class="text-white">Network Dashboard</h4>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#dashboard" data-bs-toggle="tab">
+                            <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#traffic" data-bs-toggle="tab">
+                            <i class="fas fa-network-wired me-2"></i>Traffic Data
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#anomalies" data-bs-toggle="tab">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Anomalies
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#node-analysis" data-bs-toggle="tab">
+                            <i class="fas fa-server me-2"></i>Node Analysis
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-4 px-3">
+                    <h6 class="text-white-50">FILTERS</h6>
+                    <div class="mb-3">
+                        <label for="timeRange" class="form-label text-white">Time Range</label>
+                        <select class="form-select" id="timeRange">
+                            <option value="1">Last 1 hour</option>
+                            <option value="6">Last 6 hours</option>
+                            <option value="24" selected>Last 24 hours</option>
+                            <option value="168">Last 7 days</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="networkFilter" class="form-label text-white">Network ID</label>
+                        <select class="form-select" id="networkFilter">
+                            <option value="all">All Networks</option>
+                            <!-- Dynamically populated -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nodeFilter" class="form-label text-white">Node ID</label>
+                        <select class="form-select" id="nodeFilter">
+                            <option value="all">All Nodes</option>
+                            <!-- Dynamically populated -->
+                        </select>
+                    </div>
+                    <button id="applyFilters" class="btn btn-primary w-100">Apply Filters</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Network Traffic Dashboard</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="refreshData">
+                            <i class="fas fa-sync-alt me-1"></i>Refresh
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="exportData">
+                            <i class="fas fa-download me-1"></i>Export
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <!-- Dashboard Tab -->
+                <div class="tab-pane fade show active" id="dashboard">
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="card text-white bg-primary mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Traffic</h5>
+                                    <h2 class="card-text" id="totalTraffic">--</h2>
+                                    <p class="card-text"><small>Last 24 hours</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-success mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Active Nodes</h5>
+                                    <h2 class="card-text" id="activeNodes">--</h2>
+                                    <p class="card-text"><small>Currently reporting</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-warning mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Anomalies</h5>
+                                    <h2 class="card-text" id="totalAnomalies">--</h2>
+                                    <p class="card-text"><small>Last 24 hours</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-danger mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Critical Alerts</h5>
+                                    <h2 class="card-text" id="criticalAlerts">--</h2>
+                                    <p class="card-text"><small>Require attention</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Traffic Volume Over Time</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="trafficChart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Anomaly Types</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="anomalyPieChart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Top Nodes by Traffic</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="topNodesChart" height="250"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Recent Anomalies</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover" id="recentAnomaliesTable">
+                                            <thead>
+                                            <tr>
+                                                <th>Time</th>
+                                                <th>Node</th>
+                                                <th>Type</th>
+                                                <th>Volume</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <!-- Dynamically populated -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Traffic Data Tab -->
+                <div class="tab-pane fade" id="traffic">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Traffic Data</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover" id="trafficTable">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Timestamp</th>
+                                        <th>Node ID</th>
+                                        <th>Network ID</th>
+                                        <th>Traffic Volume</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!-- Dynamically populated -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anomalies Tab -->
+                <div class="tab-pane fade" id="anomalies">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Anomaly Data</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover" id="anomaliesTable">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Timestamp</th>
+                                        <th>Node ID</th>
+                                        <th>Network ID</th>
+                                        <th>Type</th>
+                                        <th>Traffic Volume</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!-- Dynamically populated -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node Analysis Tab -->
+                <div class="tab-pane fade" id="node-analysis">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Node Traffic Analysis</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="selectedNode" class="form-label">Select Node</label>
+                                        <select class="form-select" id="selectedNode">
+                                            <!-- Dynamically populated -->
+                                        </select>
+                                    </div>
+                                    <canvas id="nodeTrafficChart" height="250"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Node Details</h5>
+                                </div>
+                                <div class="card-body" id="nodeDetails">
+                                    <div class="text-center text-muted py-5">
+                                        <i class="fas fa-server fa-3x mb-3"></i>
+                                        <p>Select a node to view details</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- Traffic Details Modal -->
+<div class="modal fade" id="trafficDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Traffic Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="trafficDetailsContent">
+                Loading...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Anomaly Details Modal -->
+<div class="modal fade" id="anomalyDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Anomaly Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="anomalyDetailsContent">
+                Loading...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Mark as Resolved</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JavaScript Libraries - IMPORTANT: Load in this exact order -->
+<!-- jQuery FIRST -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Then DataTables -->
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<!-- Then Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Then Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Then your custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
