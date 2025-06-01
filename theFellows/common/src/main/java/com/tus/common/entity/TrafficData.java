@@ -1,4 +1,4 @@
-package com.tus.trafficsimulator.entities;
+package com.tus.common.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,17 +11,16 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table
-public class Traffic {
-
+@Table(name = "traffic_data")
+public class TrafficData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
+    private Integer nodeId;
+    private Integer networkId;
+    private Double trafficVolume;
 
-    private int networkId;
-
-    private double volume;
-
+    @Column(name = "datetime")
     private LocalDateTime timestamp;
-
 }
+

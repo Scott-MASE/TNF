@@ -5,17 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fellow/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fellow/src/main/resources/application.properties" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/kafka/TrafficDataConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/service/AnomalyDetectionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/dto/TrafficDataDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/entity/TrafficData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/kafka/TrafficDataProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/repository/TrafficDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/TrafficScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/service/ScheduledLogicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/entities/Traffic.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/generator/TrafficGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/repositories/TrafficRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/TrafficSimulatorApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/TrafficSimulatorApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/entities/Traffic.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/entities/Traffic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/generator/TrafficGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/generator/TrafficGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/repositories/TrafficRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/repositories/TrafficRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/entities/Traffic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/generator/TrafficGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/repositories/TrafficRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,37 +58,48 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2xoiWcTnsdTHoF3kGRleUxC4Dbx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TrafficSimulatorApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/scott/Documents/GitHub/TNF/theFellows&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.TrafficSimulatorApplication.executor": "Run",
+    "git-widget-placeholder": "merge__arch",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/scott/Documents/GitHub/TNF/theFellows/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler" />
       <recent name="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/entities" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tus.anomalydetection.service" />
+      <recent name="com.tus.anomalydetection.kafka" />
+      <recent name="com.tus.common.entity" />
+      <recent name="com.tus.common.dto" />
+      <recent name="com.tus.trafficsimulator.repository" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,6 +116,13 @@
     <configuration name="AnomalyDetectionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="TrafficSimulator (1)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.tus.anomalydetection.AnomalyDetectionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tus.common.CommonApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,6 +161,7 @@
       <workItem from="1748614742644" duration="2005000" />
       <workItem from="1748640431958" duration="3802000" />
       <workItem from="1748700820204" duration="769000" />
+      <workItem from="1748705887599" duration="5151000" />
     </task>
     <servers />
   </component>

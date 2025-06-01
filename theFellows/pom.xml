@@ -21,6 +21,7 @@
     <module>AnomalyDetection</module>
     <module>TrafficSimulator</module>
     <module>UIAndRest</module>
+    <module>common</module>
   </modules>
 
   <dependencies>
