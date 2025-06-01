@@ -1,6 +1,6 @@
 package com.tus.trafficsimulator.service;
 
-import com.tus.trafficsimulator.entity.TrafficData;
+import com.tus.common.entity.TrafficData;
 import com.tus.trafficsimulator.repository.TrafficDataRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

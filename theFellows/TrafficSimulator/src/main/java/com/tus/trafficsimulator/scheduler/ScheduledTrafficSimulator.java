@@ -1,6 +1,6 @@
 package com.tus.trafficsimulator.scheduler;
 
-import com.tus.trafficsimulator.dto.TrafficDataDTO;
+import com.tus.common.dto.TrafficDataDTO;
 import com.tus.trafficsimulator.kafka.TrafficDataProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;

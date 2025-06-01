@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import com.tus.trafficsimulator.dto.TrafficDataDTO;
+import com.tus.common.dto.TrafficDataDTO;
 
 @Service
 public class TrafficDataProducer {
