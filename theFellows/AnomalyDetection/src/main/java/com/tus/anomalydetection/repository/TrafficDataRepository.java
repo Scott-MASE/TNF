@@ -17,4 +17,5 @@ public interface TrafficDataRepository extends JpaRepository<TrafficData, Long> 
 	@Query("SELECT t FROM TrafficData t WHERE t.timestamp >= :from")
 	List<TrafficData> findRecentTrafficData(@Param("from") LocalDateTime from);
 	
+	
 }
