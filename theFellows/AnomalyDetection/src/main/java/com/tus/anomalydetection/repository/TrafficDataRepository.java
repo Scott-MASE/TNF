@@ -1,4 +1,4 @@
-package com.tus.trafficsimulator.repository;
+package com.tus.anomalydetection.repository;
 
 import com.tus.common.entity.TrafficData;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -5,22 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/repository/AnomalyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/repository/TrafficDataRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/AnomalyDetectionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/AnomalyDetectionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/kafka/TrafficDataConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/kafka/TrafficDataConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/service/AnomalyDetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/service/AnomalyDetectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrafficSimulator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/TrafficSimulatorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/TrafficSimulatorApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/dto/TrafficDataDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/entity/TrafficData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/kafka/TrafficDataProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/kafka/TrafficDataProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/repository/TrafficDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/repository/TrafficDataRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/service/ScheduledLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/service/ScheduledLogicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/TrafficSimulatorApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/TrafficSimulatorApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/dto/TrafficDataDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/entity/TrafficData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/kafka/TrafficDataProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/kafka/TrafficDataProducer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/repository/TrafficDataRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/repository/TrafficDataRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/service/ScheduledLogicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/service/ScheduledLogicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +67,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AnomalyDetectionApplication.executor": "Run",
     "Spring Boot.TrafficSimulatorApplication.executor": "Run",
     "git-widget-placeholder": "merge__arch",
     "junie.onboarding.icon.badge.shown": "true",
@@ -87,11 +87,11 @@
       <recent name="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/entities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tus.anomalydetection.repository" />
       <recent name="com.tus.common.entity" />
       <recent name="com.tus.anomalydetection.service" />
       <recent name="com.tus.anomalydetection.kafka" />
       <recent name="com.tus.common.dto" />
-      <recent name="com.tus.trafficsimulator.repository" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -104,7 +104,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TrafficSimulatorApplication">
+  <component name="RunManager" selected="Spring Boot.AnomalyDetectionApplication">
     <configuration name="AnomalyDetectionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="TrafficSimulator (1)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.tus.anomalydetection.AnomalyDetectionApplication" />
@@ -153,7 +153,7 @@
       <workItem from="1748614742644" duration="2005000" />
       <workItem from="1748640431958" duration="3802000" />
       <workItem from="1748700820204" duration="769000" />
-      <workItem from="1748705887599" duration="6205000" />
+      <workItem from="1748705887599" duration="10178000" />
     </task>
     <servers />
   </component>

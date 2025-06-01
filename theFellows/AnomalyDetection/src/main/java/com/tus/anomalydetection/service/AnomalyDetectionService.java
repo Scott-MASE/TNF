@@ -1,8 +1,9 @@
 package com.tus.anomalydetection.service;
 
-import com.tus.fellow.entity.Anomaly;
-import com.tus.fellow.entity.TrafficData;
-import com.tus.fellow.repository.AnomalyRepository;
+
+import com.tus.anomalydetection.repository.AnomalyRepository;
+import com.tus.common.entity.Anomaly;
+import com.tus.common.entity.TrafficData;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
