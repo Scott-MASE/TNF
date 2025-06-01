@@ -11,16 +11,22 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "anomalies")
+@Table(name = "anomalies", uniqueConstraints = {
+		@UniqueConstraint(columnNames = { "nodeId", "networkId", "datetime" }) })
 public class Anomaly {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    private Integer nodeId;
-    private Integer networkId;
-    private String anomalyType;
-    private Double trafficVolume;
-    @Column(name = "datetime")
-    private LocalDateTime timestamp;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private Integer nodeId;
+	
+	private Integer networkId;
+
+	@Enumerated(EnumType.STRING)
+	private AnomalyType anomalyType;
+	
+	private Double trafficVolume;
+	
+	@Column(name = "datetime")
+	private LocalDateTime timestamp;
 }
