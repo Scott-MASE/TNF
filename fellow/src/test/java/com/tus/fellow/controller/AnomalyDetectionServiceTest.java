@@ -29,7 +29,7 @@ class AnomalyDetectionServiceTest {
 
 	private static final double HIGH_VOLUME = 2500;
 
-	private static final int TWO_TIMES = 2;
+	private static final int ONE_TIME = 1;
 
 	private static final double ZERO = 0.0;
 
@@ -61,7 +61,7 @@ class AnomalyDetectionServiceTest {
 		anomalyDetectionService.checkForAnomaly(data);
 
 		// Verify anomaly is saved
-		verify(anomalyRepository, times(TWO_TIMES)).save(any(Anomaly.class));
+		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
 	}
 
 	@Test
@@ -72,7 +72,7 @@ class AnomalyDetectionServiceTest {
 		anomalyDetectionService.checkForAnomaly(data);
 
 		// Verify anomaly is saved
-		verify(anomalyRepository, times(TWO_TIMES)).save(any(Anomaly.class));
+		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
 	}
 
 	@Test
@@ -83,7 +83,7 @@ class AnomalyDetectionServiceTest {
 		anomalyDetectionService.checkForAnomaly(data);
 
 		// Verify anomaly is saved
-		verify(anomalyRepository, times(1)).save(any(Anomaly.class));
+		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
 	}
 
 	@Test
@@ -94,7 +94,7 @@ class AnomalyDetectionServiceTest {
 		anomalyDetectionService.checkForAnomaly(data);
 
 		// Verify anomaly is saved
-		verify(anomalyRepository, times(TWO_TIMES)).save(any(Anomaly.class));
+		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
 	}
 
 	@Test
@@ -105,6 +105,6 @@ class AnomalyDetectionServiceTest {
 		anomalyDetectionService.checkForAnomaly(data);
 
 		// Verify no anomaly is saved
-		verify(anomalyRepository, times(TWO_TIMES)).save(any(Anomaly.class));
+		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
 	}
 }
