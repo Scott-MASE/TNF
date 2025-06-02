@@ -26,6 +26,8 @@ services:
     environment:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
 
+
+
   anomaly-detection:
     build:
       context: ./AnomalyDetection
@@ -35,12 +37,14 @@ services:
       - kafka
     environment:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/anomalydb
 
   ui-and-rest:
     build:
       context: ./UIAndRest
     ports:
       - "9095:9095"
-
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/anomalydb
 volumes:
   kafka_data:
