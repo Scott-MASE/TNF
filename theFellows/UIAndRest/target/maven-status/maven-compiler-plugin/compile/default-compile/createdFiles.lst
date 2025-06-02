@@ -1,0 +1,5 @@
+com/tus/uiandrest/UiAndRestApplication.class
+com/tus/uiandrest/repositories/AnomalyRepository.class
+com/tus/uiandrest/controllers/AnomalyController.class
+com/tus/uiandrest/controllers/TrafficDataController.class
+com/tus/uiandrest/repositories/TrafficDataRepository.class

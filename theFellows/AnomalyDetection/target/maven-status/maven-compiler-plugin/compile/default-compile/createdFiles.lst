@@ -1,0 +1,6 @@
+com/tus/anomalydetection/kafka/TrafficDataConsumer.class
+com/tus/anomalydetection/service/AnomalyDetectionService.class
+com/tus/anomalydetection/config/KafkaConsumerConfig.class
+com/tus/anomalydetection/repository/AnomalyRepository.class
+com/tus/anomalydetection/repository/TrafficDataRepository.class
+com/tus/anomalydetection/AnomalyDetectionApplication.class

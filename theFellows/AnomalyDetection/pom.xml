@@ -8,10 +8,10 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>TrafficSimulator</artifactId>
+    <artifactId>AnomalyDetection</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>TrafficSimulator</name>
-    <description>TrafficSimulator</description>
+    <name>AnomalyDetection</name>
+    <description>AnomalyDetection</description>
     <url/>
     <licenses>
         <license/>

@@ -1,19 +1,50 @@
 version: '3.8'
 
 services:
-  mysql:
-    image: mysql:8.0
-    container_name: traffic-mysql
-    restart: unless-stopped
+  kafka:
+    image: bitnami/kafka:4.0.0
+    container_name: kafka
     environment:
-      MYSQL_DATABASE: trafficdb
-      MYSQL_USER:      traffic_user
-      MYSQL_PASSWORD:  traffic_pass
-      MYSQL_ROOT_PASSWORD: root_pass
-    ports:
-      - "3306:3306"
+      - KAFKA_CFG_NODE_ID=1
+      - KAFKA_CFG_PROCESS_ROLES=controller,broker
+      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@kafka:9093
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_KRAFT_CLUSTER_ID=kraft-cluster-12345
     volumes:
-      - mysql-data:/var/lib/mysql
+      - kafka_data:/bitnami/kafka
 
+  traffic-simulator:
+    build:
+      context: ./TrafficSimulator
+    ports:
+      - "9091:9091"
+    depends_on:
+      - kafka
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+
+
+
+  anomaly-detection:
+    build:
+      context: ./AnomalyDetection
+    ports:
+      - "9097:9097"
+    depends_on:
+      - kafka
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/anomalydb
+
+  ui-and-rest:
+    build:
+      context: ./UIAndRest
+    ports:
+      - "9095:9095"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/anomalydb
 volumes:
-  mysql-data:
+  kafka_data:
