@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AnomalyDetection/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrafficSimulator/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIAndRest/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/classes/com/tus/anomalydetection/AnomalyDetectionApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/classes/com/tus/anomalydetection/config/KafkaConsumerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/classes/com/tus/anomalydetection/kafka/TrafficDataConsumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/classes/com/tus/anomalydetection/service/AnomalyDetectionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/Anomaly.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/Anomaly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/com/tus/common/CommonApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/tus/common/dto/TrafficDataDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/tus/common/dto/TrafficDataDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/Anomaly.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/Anomaly.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/TrafficData.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/TrafficData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
