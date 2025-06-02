@@ -1,5 +1,5 @@
 // Global variables
-let trafficChart, anomalyPieChart, topNodesChart, nodeTrafficChart;
+let trafficChart, anomalyPieChart, topNodesChart;
 let trafficData = [];
 let anomaliesData = [];
 let nodesList = [];
@@ -37,14 +37,6 @@ $(document).ready(function() {
     // Event listeners
     $('#applyFilters').click(applyFilters);
     $('#refreshData').click(loadAllData);
-    $('#selectedNode').change(updateNodeAnalysis);
-
-    // Modal events
-    $('#trafficDetailsModal').on('show.bs.modal', function(event) {
-        const button = $(event.relatedTarget);
-        const trafficId = button.data('id');
-        loadTrafficDetails(trafficId);
-    });
 
     $('#anomalyDetailsModal').on('show.bs.modal', function(event) {
         const button = $(event.relatedTarget);
@@ -189,67 +181,13 @@ function initCharts() {
             }
         }
     });
-
-    // Node Traffic Chart
-    const nodeTrafficCtx = document.getElementById('nodeTrafficChart').getContext('2d');
-    nodeTrafficChart = new Chart(nodeTrafficCtx, {
-        type: 'line',
-        data: {
-            labels: [],
-            datasets: [{
-                label: 'Traffic Volume',
-                data: [],
-                backgroundColor: 'rgba(28, 200, 138, 0.05)',
-                borderColor: 'rgba(28, 200, 138, 1)',
-                pointBackgroundColor: 'rgba(28, 200, 138, 1)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgba(28, 200, 138, 1)',
-                borderWidth: 2,
-                tension: 0.3,
-                fill: true
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Traffic Volume'
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Time'
-                    }
-                }
-            },
-            plugins: {
-                tooltip: {
-                    mode: 'index',
-                    intersect: false
-                },
-                legend: {
-                    display: false
-                }
-            },
-            interaction: {
-                intersect: false,
-                mode: 'nearest'
-            }
-        }
-    });
 }
 
 // Load all data
 function loadAllData() {
-    showLoading();
     Promise.all([
-        fetch('http://localhost:9095/api/traffic').then(res => res.json()),
-        fetch('http://localhost:9095/api/anomalies').then(res => res.json())
+        fetch('/api/traffic').then(res => res.json()),
+        fetch('/api/anomalies').then(res => res.json())
     ])
     .then(([traffic, anomalies]) => {
         trafficData = traffic;
@@ -268,11 +206,9 @@ function loadAllData() {
         // Update tables
         updateTables();
 
-        hideLoading();
     })
     .catch(error => {
         console.error('Error loading data:', error);
-        hideLoading();
         alert('Error loading data. Please check console for details.');
     });
 }
@@ -353,7 +289,7 @@ function updateDashboard() {
     const activeNodes = new Set(trafficData.map(item => item.nodeId)).size;
     const totalAnomalies = anomaliesData.length;
     const criticalAlerts = anomaliesData.filter(anomaly =>
-        anomaly.anomalyType === 'traffic_spike' || anomaly.anomalyType === 'ddos_attack'
+        anomaly.anomalyType === 'Sudden Spike' || anomaly.anomalyType === 'Sudden Drop'
     ).length;
 
     // Update metric cards
@@ -381,7 +317,7 @@ function updateDashboard() {
             <tr>
                 <td>${time}</td>
                 <td>Node ${anomaly.nodeId}</td>
-                <td><span class="badge ${anomalyClass}">${formatAnomalyType(anomaly.anomalyType)}</span></td>
+                <td><span class="badge ${anomalyClass}">${anomaly.anomalyType}</span></td>
                 <td>${anomaly.trafficVolume.toLocaleString()}</td>
             </tr>
         `);
@@ -406,7 +342,7 @@ function updateCharts(trafficData, anomaliesData) {
     // Anomaly Pie Chart
     const anomalyTypes = {};
     anomaliesData.forEach(anomaly => {
-        const type = formatAnomalyType(anomaly.anomalyType);
+        const type = anomaly.anomalyType;
         anomalyTypes[type] = (anomalyTypes[type] || 0) + 1;
     });
 
@@ -441,10 +377,7 @@ function updateTables(trafficData = [], anomaliesData = []) {
             new Date(item.timestamp).toLocaleString(),
             item.nodeId,
             item.networkId,
-            item.trafficVolume.toLocaleString(),
-            `<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#trafficDetailsModal" data-id="${item.id}">
-                <i class="fas fa-search"></i>
-            </button>`
+            item.trafficVolume.toLocaleString()
         ]);
     });
 
@@ -462,7 +395,7 @@ function updateTables(trafficData = [], anomaliesData = []) {
             new Date(item.timestamp).toLocaleString(),
             item.nodeId,
             item.networkId,
-            `<span class="badge ${anomalyClass}">${formatAnomalyType(item.anomalyType)}</span>`,
+            `<span class="badge ${anomalyClass}">${item.anomalyType}</span>`,
             item.trafficVolume.toLocaleString(),
             `<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#anomalyDetailsModal" data-id="${item.id}">
                 <i class="fas fa-search"></i>
@@ -473,121 +406,11 @@ function updateTables(trafficData = [], anomaliesData = []) {
     anomaliesTable.draw();
 }
 
-// Update node analysis
-function updateNodeAnalysis() {
-    const nodeId = $('#selectedNode').val();
-    if (!nodeId) return;
 
-    // Filter traffic for this node
-    const nodeTraffic = trafficData
-        .filter(item => item.nodeId == nodeId)
-        .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
-
-    // Update chart
-    nodeTrafficChart.data.labels = nodeTraffic.map(item => new Date(item.timestamp).toLocaleTimeString());
-    nodeTrafficChart.data.datasets[0].data = nodeTraffic.map(item => item.trafficVolume);
-    nodeTrafficChart.update();
-
-    // Update node details
-    const nodeAnomalies = anomaliesData.filter(item => item.nodeId == nodeId);
-    const nodeNetwork = nodeTraffic.length > 0 ? nodeTraffic[0].networkId : 'N/A';
-
-    const detailsHtml = `
-        <div class="row">
-            <div class="col-md-6">
-                <h5>Node ${nodeId}</h5>
-                <p class="text-muted">Network: ${nodeNetwork}</p>
-                <hr>
-                <p><i class="fas fa-chart-line me-2"></i>Total Traffic: ${nodeTraffic.reduce((sum, item) => sum + item.trafficVolume, 0).toLocaleString()}</p>
-                <p><i class="fas fa-exclamation-triangle me-2"></i>Anomalies Detected: ${nodeAnomalies.length}</p>
-            </div>
-            <div class="col-md-6">
-                <h5>Recent Activity</h5>
-                <ul class="list-group">
-                    ${nodeAnomalies.slice(0, 3).map(anomaly => `
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            ${formatAnomalyType(anomaly.anomalyType)}
-                            <span class="badge bg-primary rounded-pill">${new Date(anomaly.timestamp).toLocaleTimeString()}</span>
-                        </li>
-                    `).join('')}
-                    ${nodeAnomalies.length === 0 ? '<li class="list-group-item text-muted">No recent anomalies</li>' : ''}
-                </ul>
-            </div>
-        </div>
-    `;
-
-    $('#nodeDetails').html(detailsHtml);
-}
-
-// Load traffic details for modal
-function loadTrafficDetails(id) {
-    fetch(`http://localhost:9095/api/traffic/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            const detailsHtml = `
-                <div class="row">
-                    <div class="col-md-6">
-                        <p><strong>ID:</strong> ${data.id}</p>
-                        <p><strong>Timestamp:</strong> ${new Date(data.timestamp).toLocaleString()}</p>
-                        <p><strong>Node ID:</strong> ${data.nodeId}</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p><strong>Network ID:</strong> ${data.networkId}</p>
-                        <p><strong>Traffic Volume:</strong> ${data.trafficVolume.toLocaleString()}</p>
-                    </div>
-                </div>
-                <div class="mt-3">
-                    <h5>Traffic Pattern</h5>
-                    <canvas id="trafficDetailsChart" height="200"></canvas>
-                </div>
-            `;
-
-            $('#trafficDetailsContent').html(detailsHtml);
-
-            // Create mini chart for details
-            const ctx = document.getElementById('trafficDetailsChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['-2h', '-1h', 'Current', '+1h', '+2h'],
-                    datasets: [{
-                        label: 'Traffic Volume',
-                        data: [
-                            data.trafficVolume * 0.7,
-                            data.trafficVolume * 0.9,
-                            data.trafficVolume,
-                            data.trafficVolume * 1.1,
-                            data.trafficVolume * 0.8
-                        ],
-                        borderColor: 'rgba(78, 115, 223, 1)',
-                        tension: 0.1,
-                        fill: false
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: false
-                        }
-                    }
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Error loading traffic details:', error);
-            $('#trafficDetailsContent').html('<p class="text-danger">Error loading details. Please try again.</p>');
-        });
-}
 
 // Load anomaly details for modal
 function loadAnomalyDetails(id) {
-    fetch(`http://localhost:9095/api/anomalies/${id}`)
+    fetch(`/api/anomalies/${id}`)
         .then(res => res.json())
         .then(data => {
             const anomalyClass = getAnomalyClass(data.anomalyType);
@@ -601,13 +424,9 @@ function loadAnomalyDetails(id) {
                     </div>
                     <div class="col-md-6">
                         <p><strong>Network ID:</strong> ${data.networkId}</p>
-                        <p><strong>Type:</strong> <span class="badge ${anomalyClass}">${formatAnomalyType(data.anomalyType)}</span></p>
+                        <p><strong>Type:</strong> <span class="badge ${anomalyClass}">${data.anomalyType}</span></p>
                         <p><strong>Traffic Volume:</strong> ${data.trafficVolume.toLocaleString()}</p>
                     </div>
-                </div>
-                <div class="mt-3">
-                    <h5>Anomaly Context</h5>
-                    <canvas id="anomalyDetailsChart" height="200"></canvas>
                 </div>
                 <div class="mt-3">
                     <h5>Suggested Actions</h5>
@@ -621,40 +440,6 @@ function loadAnomalyDetails(id) {
 
             $('#anomalyDetailsContent').html(detailsHtml);
 
-            // Create mini chart for details
-            const ctx = document.getElementById('anomalyDetailsChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['-2h', '-1h', 'Anomaly', '+1h', '+2h'],
-                    datasets: [{
-                        label: 'Traffic Volume',
-                        data: [
-                            data.trafficVolume * 0.5,
-                            data.trafficVolume * 0.7,
-                            data.trafficVolume,
-                            data.trafficVolume * 0.6,
-                            data.trafficVolume * 0.4
-                        ],
-                        borderColor: 'rgba(231, 74, 59, 1)',
-                        tension: 0.1,
-                        fill: false
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: false
-                        }
-                    }
-                }
-            });
         })
         .catch(error => {
             console.error('Error loading anomaly details:', error);
@@ -662,39 +447,55 @@ function loadAnomalyDetails(id) {
         });
 }
 
-// Helper functions
-function formatAnomalyType(type) {
-    return type.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-}
 
 function getAnomalyClass(type) {
-    if (type.includes('spike')) return 'badge-spike';
-    if (type.includes('dip')) return 'badge-dip';
-    if (type.includes('flood')) return 'badge-flood';
+    const lowerType = type.toLowerCase();
+
+    if (lowerType.includes('spike')) return 'badge-spike';
+    if (lowerType.includes('drop')) return 'badge-drop';
+    if (lowerType.includes('zero')) return 'badge-zero';
+    if (lowerType.includes('high')) return 'badge-high';
+    if (lowerType.includes('unusual')) return 'badge-unusual';
+
     return 'badge-other';
 }
+
 
 function getSuggestedActions(type) {
     if (type.includes('spike')) {
         return [
             "Check for DDoS attacks on Node",
-            "Verify if this is expected traffic (e.g., scheduled backup)",
-            "Consider rate limiting if pattern continues",
-            "Review firewall rules for this node"
+            "Verify if this is expected traffic (e.g., scheduled backup or software update)",
+            "Monitor traffic patterns over time",
+            "Review firewall and intrusion detection system logs"
         ];
-    } else if (type.includes('dip')) {
+    } else if (type.includes('Drop')) {
         return [
-            "Check node connectivity and health",
-            "Verify if maintenance was scheduled",
-            "Review routing tables for this node",
-            "Check for hardware failures"
+            "Inspect network interface errors or collisions",
+            "Verify routing paths between nodes",
+            "Check for configuration mismatches or protocol errors",
+            "Run connectivity diagnostics (e.g., ping, traceroute)"
         ];
-    } else if (type.includes('flood')) {
+    } else if (type.includes('Zero')) {
         return [
-            "Investigate possible broadcast storm",
-            "Check spanning tree configuration",
-            "Verify VLAN configurations",
-            "Inspect for possible loops in network"
+            "Ensure the node is powered on and reachable",
+            "Verify monitoring tool is correctly configured",
+            "Check if the node was recently removed or decommissioned",
+            "Inspect related system and application logs"
+        ];
+    } else if (type.includes('High')) {
+        return [
+            "Identify applications generating excess traffic",
+            "Check QoS (Quality of Service) policies and limits",
+            "Validate performance of connected services",
+            "Monitor CPU and memory usage for spikes"
+        ];
+    } else if (type.includes('Unusual')) {
+        return [
+            "Compare with normal behavioral baselines",
+            "Run packet analysis to identify unexpected patterns",
+            "Audit recent configuration or policy changes",
+            "Investigate external factors or new device connections"
         ];
     } else {
         return [
@@ -704,13 +505,4 @@ function getSuggestedActions(type) {
             "Monitor for recurrence of this anomaly"
         ];
     }
-}
-
-function showLoading() {
-    // You could implement a loading spinner here
-    console.log('Loading data...');
-}
-
-function hideLoading() {
-    console.log('Data loaded');
 }

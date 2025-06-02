@@ -40,11 +40,6 @@
                             <i class="fas fa-exclamation-triangle me-2"></i>Anomalies
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#node-analysis" data-bs-toggle="tab">
-                            <i class="fas fa-server me-2"></i>Node Analysis
-                        </a>
-                    </li>
                 </ul>
                 <div class="mt-4 px-3">
                     <h6 class="text-white-50">FILTERS</h6>
@@ -83,10 +78,7 @@
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group me-2">
                         <button type="button" class="btn btn-sm btn-outline-secondary" id="refreshData">
-                            <i class="fas fa-sync-alt me-1"></i>Refresh
-                        </button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" id="exportData">
-                            <i class="fas fa-download me-1"></i>Export
+                            <i class="fas fa-sync-alt me-2"></i>Refresh
                         </button>
                     </div>
                 </div>
@@ -164,7 +156,7 @@
                                     <h5>Top Nodes by Traffic</h5>
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="topNodesChart" height="250"></canvas>
+                                    <canvas id="topNodesChart" height="300"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -211,7 +203,6 @@
                                         <th>Node ID</th>
                                         <th>Network ID</th>
                                         <th>Traffic Volume</th>
-                                        <th>Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -251,41 +242,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Node Analysis Tab -->
-                <div class="tab-pane fade" id="node-analysis">
-                    <div class="row mb-4">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5>Node Traffic Analysis</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="mb-3">
-                                        <label for="selectedNode" class="form-label">Select Node</label>
-                                        <select class="form-select" id="selectedNode">
-                                            <!-- Dynamically populated -->
-                                        </select>
-                                    </div>
-                                    <canvas id="nodeTrafficChart" height="250"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5>Node Details</h5>
-                                </div>
-                                <div class="card-body" id="nodeDetails">
-                                    <div class="text-center text-muted py-5">
-                                        <i class="fas fa-server fa-3x mb-3"></i>
-                                        <p>Select a node to view details</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </main>
     </div>
@@ -303,7 +259,7 @@
                 Loading...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
             </div>
         </div>
     </div>
@@ -321,8 +277,6 @@
                 Loading...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Mark as Resolved</button>
             </div>
         </div>
     </div>

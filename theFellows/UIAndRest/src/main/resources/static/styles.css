@@ -162,23 +162,33 @@ main {
     vertical-align: baseline;
     border-radius: 0.25rem;
 }
-
 .badge-spike {
-    background-color: rgba(231, 74, 59, 0.2);
+    background-color: rgba(231, 74, 59, 0.2);  /* red tint */
     color: #e74a3b;
 }
 
-.badge-dip {
-    background-color: rgba(54, 185, 204, 0.2);
+.badge-drop {
+    background-color: rgba(54, 185, 204, 0.2);  /* cyan tint */
     color: #36b9cc;
 }
 
-.badge-flood {
-    background-color: rgba(246, 194, 62, 0.2);
+.badge-zero {
+    background-color: rgba(133, 135, 150, 0.2);  /* neutral gray tint */
+    color: #858796;
+}
+
+.badge-high {
+    background-color: rgba(246, 194, 62, 0.2);  /* yellow/gold tint */
     color: #f6c23e;
 }
 
+.badge-unusual {
+    background-color: rgba(78, 115, 223, 0.2);  /* blue tint */
+    color: #4e73df;
+}
+
 .badge-other {
-    background-color: rgba(133, 135, 150, 0.2);
+    background-color: rgba(133, 135, 150, 0.2);  /* fallback gray */
     color: #5a5c69;
 }
+
