@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface AnomalyRepository extends JpaRepository<Anomaly, Long> {
     List<Anomaly> findByNetworkId(Integer networkId);
+    List<Anomaly> findTop20ByOrderByTimestampDesc();
 }
 

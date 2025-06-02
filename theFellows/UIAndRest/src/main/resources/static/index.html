@@ -13,6 +13,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
 
 </head>
 <body>
@@ -187,6 +189,26 @@
                     </div>
                 </div>
 
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">AI Overview</h5>
+                                <button class="btn btn-sm btn-primary" id="fetchApiData">
+                                    <i class="fas fa-search me-1"></i>Analyse Recent Anomalies
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div id="apiOutput" class="bg-light p-3 border rounded" style="max-height: 400px; overflow-y: auto;">
+                                    <!-- API data will appear here -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- Traffic Data Tab -->
                 <div class="tab-pane fade" id="traffic">
                     <div class="card">
@@ -293,5 +315,6 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!-- Then your custom JS -->
 <script src="script.js"></script>
+
 </body>
 </html>

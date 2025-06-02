@@ -185,6 +185,7 @@ function initCharts() {
 
 // Load all data
 function loadAllData() {
+    document.getElementById('fetchApiData').click();
     Promise.all([
         fetch('/api/traffic').then(res => res.json()),
         fetch('/api/anomalies').then(res => res.json())
@@ -506,3 +507,32 @@ function getSuggestedActions(type) {
         ];
     }
 }
+
+
+//AI Overview
+ document.getElementById('fetchApiData').addEventListener('click', async function () {
+      const outputDiv = document.getElementById('apiOutput');
+      outputDiv.innerHTML = "<strong>Loading analysis...</strong>";
+
+      try {
+          const response = await fetch('/api/ai/analysis');
+          if (!response.ok) throw new Error('Network response was not ok');
+
+          const data = await response.json();
+          let content = data.choices?.[0]?.message?.content || '';
+
+          // Simple cleanup - remove markdown code block markers if present
+          if (content.startsWith('```html') && content.endsWith('```')) {
+              content = content.slice(7, -3).trim(); // Remove both markers
+          } else if (content.startsWith('```') && content.endsWith('```')) {
+              content = content.slice(3, -3).trim(); // Handle non-html code blocks too
+          }
+
+          // Insert the cleaned content
+          outputDiv.innerHTML = content || '<em>No content returned</em>';
+          outputDiv.scrollTop = outputDiv.scrollHeight;
+
+      } catch (error) {
+          outputDiv.textContent = 'Error fetching data: ' + error.message;
+      }
+  });
