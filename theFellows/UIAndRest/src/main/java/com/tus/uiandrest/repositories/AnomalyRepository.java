@@ -11,5 +11,7 @@ import java.util.List;
 public interface AnomalyRepository extends JpaRepository<Anomaly, Long> {
     List<Anomaly> findByNetworkId(Integer networkId);
     boolean existsByNodeIdAndNetworkIdAndTimestamp(Integer nodeId, Integer networkId, LocalDateTime timestamp);
+    List<Anomaly> findTop20ByOrderByTimestampDesc();
+
 }
 
