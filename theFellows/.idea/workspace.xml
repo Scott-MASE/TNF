@@ -5,16 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AnomalyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/TrafficDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/repositories/AnomalyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/repositories/TrafficDataRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/UiAndRestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/UiAndRestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/classes/com/tus/anomalydetection/config/KafkaConsumerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/classes/com/tus/anomalydetection/config/KafkaConsumerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -53,6 +61,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.AnomalyDetectionApplicationTests.executor": "Run",
+    "JUnit.TrafficSimulatorApplicationTests.executor": "Run",
+    "JUnit.UiAndRestApplicationTests.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
@@ -64,9 +75,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AnomalyDetectionApplication.executor": "Run",
     "Spring Boot.TrafficSimulatorApplication.executor": "Run",
-    "git-widget-placeholder": "development",
+    "Spring Boot.UiAndRestApplication.executor": "Run",
+    "git-widget-placeholder": "pipeline__docker",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/scott/Documents/GitHub/TNF/theFellows/UIAndRest/src/main/java/com/tus/uiandrest/controllers",
+    "last_opened_file_path": "/Users/scott/Documents/GitHub/TNF/theFellows/UIAndRest/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,9 +90,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/UIAndRest/src/test/resources" />
+      <recent name="$PROJECT_DIR$/TrafficSimulator/src/test/resources" />
+      <recent name="$PROJECT_DIR$/AnomalyDetection/src/test/resources" />
       <recent name="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers" />
       <recent name="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler" />
-      <recent name="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/entities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.tus.uiandrest.repositories" />
@@ -100,7 +114,52 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AnomalyDetectionApplication">
+  <component name="RunManager" selected="JUnit.AnomalyDetectionApplicationTests">
+    <configuration name="AnomalyDetectionApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrafficSimulator (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tus.anomalydetection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tus.anomalydetection" />
+      <option name="MAIN_CLASS_NAME" value="com.tus.anomalydetection.AnomalyDetectionApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrafficSimulatorApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrafficSimulator (2)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tus.trafficsimulator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tus.trafficsimulator" />
+      <option name="MAIN_CLASS_NAME" value="com.tus.trafficsimulator.TrafficSimulatorApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UiAndRestApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UIAndRest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tus.uiandrest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tus.uiandrest" />
+      <option name="MAIN_CLASS_NAME" value="com.tus.uiandrest.UiAndRestApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnomalyDetectionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="TrafficSimulator (1)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.tus.anomalydetection.AnomalyDetectionApplication" />
@@ -129,6 +188,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AnomalyDetectionApplicationTests" />
+        <item itemvalue="JUnit.TrafficSimulatorApplicationTests" />
+        <item itemvalue="JUnit.UiAndRestApplicationTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
