@@ -34,29 +34,20 @@ public class AnomalyDetectionService {
     public void checkForAnomaly(TrafficData data) {
         double currentThreshold = isDayTime() ? dayThreshold : nightThreshold;
         
-     // Detecting various anomalies
-        if (data.getTrafficVolume() > currentThreshold) {
-            createAnomaly(data, AnomalyType.HIGH_TRAFFIC_VOLUME);
-        }
-        
-        if (Double.compare(data.getTrafficVolume(), 0.0) == 0) {
-        	logger.info("AnomalyDetectionService traffic: nodeId={}, networkId={}, volume={}, timestamp={}", 
-                    data.getNodeId(), data.getNetworkId(), data.getTrafficVolume(), data.getTimestamp());
-            createAnomaly(data, AnomalyType.ZERO_TRAFFIC);
-        }
-
-        if (isSuddenDrop(data)) {
-            createAnomaly(data, AnomalyType.SUDDEN_DROP);
-        }
-
-        if (isSuddenSpike(data)) {
-            createAnomaly(data, AnomalyType.SUDDEN_SPIKE);
-        }
-
-        if (isUnusualNightTraffic(data)) {
-            createAnomaly(data, AnomalyType.UNUSUAL_NIGHT_TRAFFIC);
-        }
-
+        // Detecting various anomalies
+		if (Double.compare(data.getTrafficVolume(), 0.0) == 0) {
+			logger.info("AnomalyDetectionService traffic: nodeId={}, networkId={}, volume={}, timestamp={}",
+					data.getNodeId(), data.getNetworkId(), data.getTrafficVolume(), data.getTimestamp());
+			createAnomaly(data, AnomalyType.ZERO_TRAFFIC);
+		} else if (isSuddenSpike(data)) {
+			createAnomaly(data, AnomalyType.SUDDEN_SPIKE);
+		} else if (isSuddenDrop(data)) {
+			createAnomaly(data, AnomalyType.SUDDEN_DROP);
+		} else if (isUnusualNightTraffic(data)) {
+			createAnomaly(data, AnomalyType.UNUSUAL_NIGHT_TRAFFIC);
+		} else if (data.getTrafficVolume() > currentThreshold) {
+			createAnomaly(data, AnomalyType.HIGH_TRAFFIC_VOLUME);
+		}
     }
     private void createAnomaly(TrafficData data, AnomalyType anomalyType) {
         Anomaly anomaly = new Anomaly();

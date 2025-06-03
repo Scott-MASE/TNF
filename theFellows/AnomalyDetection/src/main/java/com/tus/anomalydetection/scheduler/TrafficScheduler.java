@@ -1,0 +1,30 @@
+package com.tus.anomalydetection.scheduler;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import com.tus.anomalydetection.service.ScheduledLogicService;
+
+
+
+@Component
+public class TrafficScheduler {
+
+    @Value("${scheduler.enabled}")
+    private boolean schedulerEnabled;
+
+    private final ScheduledLogicService service;
+
+    public TrafficScheduler(ScheduledLogicService service) {
+        this.service = service;
+    }
+
+    @Scheduled(fixedRate = 60000) // every 1 min
+    public void runScheduledTask() {
+        if (schedulerEnabled) {
+            service.execute();
+        }
+    }
+}
+
