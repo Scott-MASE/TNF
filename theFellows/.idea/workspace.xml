@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/TEST-com.tus.anomalydetection.AnomalyDetectionApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/TEST-com.tus.anomalydetection.AnomalyDetectionApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/com.tus.anomalydetection.AnomalyDetectionApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/com.tus.anomalydetection.AnomalyDetectionApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/surefire-reports/TEST-com.tus.trafficsimulator.TrafficSimulatorApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/surefire-reports/TEST-com.tus.trafficsimulator.TrafficSimulatorApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/surefire-reports/com.tus.trafficsimulator.TrafficSimulatorApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/surefire-reports/com.tus.trafficsimulator.TrafficSimulatorApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/target/surefire-reports/TEST-com.tus.uiandrest.UiAndRestApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/surefire-reports/TEST-com.tus.uiandrest.UiAndRestApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/target/surefire-reports/com.tus.uiandrest.UiAndRestApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/surefire-reports/com.tus.uiandrest.UiAndRestApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/AnomalyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/AnomalyDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/Anomaly.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/Anomaly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/TrafficData.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/TrafficData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +60,7 @@
     "Spring Boot.AnomalyDetectionApplication.executor": "Run",
     "Spring Boot.TrafficSimulatorApplication.executor": "Run",
     "Spring Boot.UiAndRestApplication.executor": "Run",
-    "git-widget-placeholder": "development",
+    "git-widget-placeholder": "bloat__hotfix",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/scott/Documents/GitHub/TNF/theFellows/UIAndRest/src/test/resources",
     "node.js.detected.package.eslint": "true",
@@ -194,6 +172,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.AnomalyDetectionApplicationTests" />
+      <item itemvalue="JUnit.TrafficSimulatorApplicationTests" />
+      <item itemvalue="JUnit.UiAndRestApplicationTests" />
+      <item itemvalue="Spring Boot.AnomalyDetectionApplication" />
+      <item itemvalue="Spring Boot.CommonApplication" />
+      <item itemvalue="Spring Boot.TrafficSimulatorApplication" />
+      <item itemvalue="Spring Boot.UiAndRestApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AnomalyDetectionApplicationTests" />
