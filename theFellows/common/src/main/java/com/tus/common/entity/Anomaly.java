@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-
+@Data
+@NoArgsConstructor
 @Entity
 @Table(name = "anomalies", uniqueConstraints = {
 		@UniqueConstraint(columnNames = { "nodeId", "networkId", "datetime" }) })
@@ -36,46 +37,5 @@ public class Anomaly {
 		this.timestamp = timestamp;
 	}
 
-	public Anomaly() {
-	}
 
-	public Integer getNodeId() {
-		return nodeId;
-	}
-
-	public void setNodeId(Integer nodeId) {
-		this.nodeId = nodeId;
-	}
-
-	public Integer getNetworkId() {
-		return networkId;
-	}
-
-	public void setNetworkId(Integer networkId) {
-		this.networkId = networkId;
-	}
-
-	public AnomalyType getAnomalyType() {
-		return anomalyType;
-	}
-
-	public void setAnomalyType(AnomalyType anomalyType) {
-		this.anomalyType = anomalyType;
-	}
-
-	public Double getTrafficVolume() {
-		return trafficVolume;
-	}
-
-	public void setTrafficVolume(Double trafficVolume) {
-		this.trafficVolume = trafficVolume;
-	}
-
-	public LocalDateTime getTimestamp() {
-		return timestamp;
-	}
-
-	public void setTimestamp(LocalDateTime timestamp) {
-		this.timestamp = timestamp;
-	}
 }
