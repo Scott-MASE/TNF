@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Network Traffic Dashboard</title>
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
     <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"/>
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"/>
 
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 
-
+    <!-- SortableJS -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -58,18 +64,27 @@
                         <label for="networkFilter" class="form-label text-white">Network ID</label>
                         <select class="form-select" id="networkFilter">
                             <option value="all">All Networks</option>
-                            <!-- Dynamically populated -->
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="nodeFilter" class="form-label text-white">Node ID</label>
                         <select class="form-select" id="nodeFilter">
                             <option value="all">All Nodes</option>
-                            <!-- Dynamically populated -->
                         </select>
                     </div>
                     <button id="applyFilters" class="btn btn-primary w-100">Apply Filters</button>
                 </div>
+
+<!--                Cat Widget-->
+                <div class="mt-2 px-2">
+                    <h6 class="text-white-50 mb-1" style="font-size: 0.85rem;">😺 Cat of the Day</h6>
+                    <div class="bg-light rounded p-1 text-center">
+                        <img id="catImage" src="" alt="Random Cat" class="img-fluid rounded mb-1" style="max-height: 120px;">
+                        <button onclick="loadCatImage()" class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size: 0.75rem;">↻</button>
+                    </div>
+                </div>
+
+
             </div>
         </nav>
 
@@ -89,7 +104,8 @@
             <div class="tab-content">
                 <!-- Dashboard Tab -->
                 <div class="tab-pane fade show active" id="dashboard">
-                    <div class="row mb-4">
+                    <!-- Row 1 - Drag enabled -->
+                    <div class="row mb-4" id="dashboard-row-1">
                         <div class="col-md-3">
                             <div class="card text-white bg-primary mb-3">
                                 <div class="card-body">
@@ -128,7 +144,8 @@
                         </div>
                     </div>
 
-                    <div class="row mb-4">
+                    <!-- Row 2 - Drag enabled -->
+                    <div class="row mb-4" id="dashboard-row-2">
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-header">
@@ -151,7 +168,8 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <!-- Row 3 - Drag enabled -->
+                    <div class="row mb-4" id="dashboard-row-3">
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
@@ -178,38 +196,33 @@
                                                 <th>Volume</th>
                                             </tr>
                                             </thead>
-                                            <tbody>
-                                            <!-- Dynamically populated -->
-                                            </tbody>
+                                            <tbody></tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="row mt-4">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">AI Overview</h5>
-                                <button class="btn btn-sm btn-primary" id="fetchApiData">
-                                    <i class="fas fa-search me-1"></i>Analyse Recent Anomalies
-                                </button>
-                            </div>
-                            <div class="card-body">
-                                <div id="apiOutput" class="bg-light p-3 border rounded" style="max-height: 400px; overflow-y: auto;">
-                                    <!-- API data will appear here -->
+                    <!-- AI Overview -->
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">AI Overview</h5>
+                                    <button class="btn btn-sm btn-primary" id="fetchApiData">
+                                        <i class="fas fa-search me-1"></i>Analyse Recent Anomalies
+                                    </button>
                                 </div>
-
+                                <div class="card-body">
+                                    <div id="apiOutput" class="bg-light p-3 border rounded" style="max-height: 400px; overflow-y: auto;"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-                <!-- Traffic Data Tab -->
+                <!-- Traffic Tab -->
                 <div class="tab-pane fade" id="traffic">
                     <div class="card">
                         <div class="card-header">
@@ -227,9 +240,7 @@
                                         <th>Traffic Volume</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <!-- Dynamically populated -->
-                                    </tbody>
+                                    <tbody></tbody>
                                 </table>
                             </div>
                         </div>
@@ -256,9 +267,7 @@
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <!-- Dynamically populated -->
-                                    </tbody>
+                                    <tbody></tbody>
                                 </table>
                             </div>
                         </div>
@@ -269,40 +278,30 @@
     </div>
 </div>
 
-<!-- Traffic Details Modal -->
-<div class="modal fade" id="trafficDetailsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Traffic Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="trafficDetailsContent">
-                Loading...
-            </div>
-            <div class="modal-footer">
+<script>
+    const catApiKey = "live_lnmYa9aJoNahZFEvBWd4qlqOw1QPbqIrWNXtqxFDsM6ey1PH2eLsxvKAlTmk8XyB";
 
-            </div>
-        </div>
-    </div>
-</div>
+    function loadCatImage() {
+        fetch("https://api.thecatapi.com/v1/images/search", {
+            headers: {
+                "x-api-key": catApiKey
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            const img = document.getElementById("catImage");
+            if (img && data[0]) {
+                img.src = data[0].url;
+            }
+        })
+        .catch(err => console.error("Failed to load cat image:", err));
+    }
 
-<!-- Anomaly Details Modal -->
-<div class="modal fade" id="anomalyDetailsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Anomaly Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="anomalyDetailsContent">
-                Loading...
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
+    // Load once on page load
+    window.addEventListener('DOMContentLoaded', loadCatImage);
+</script>
+
+
 <!-- JavaScript Libraries - IMPORTANT: Load in this exact order -->
 <!-- jQuery FIRST -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

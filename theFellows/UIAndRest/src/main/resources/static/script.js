@@ -4,6 +4,11 @@ let trafficData = [];
 let anomaliesData = [];
 let nodesList = [];
 let networksList = [];
+let currentFilters = {
+    timeRange: '24',
+    networkId: 'all',
+    nodeId: 'all'
+};
 
 // Document ready - updated to ensure proper initialization
 $(document).ready(function() {
@@ -31,12 +36,24 @@ $(document).ready(function() {
     // Initialize charts
     initCharts();
 
-    // Load initial data
+    // Load initial data with default filters
     loadAllData();
 
     // Event listeners
-    $('#applyFilters').click(applyFilters);
-    $('#refreshData').click(loadAllData);
+    $('#applyFilters').click(function() {
+        // Save current filter values before applying
+        currentFilters = {
+            timeRange: $('#timeRange').val(),
+            networkId: $('#networkFilter').val(),
+            nodeId: $('#nodeFilter').val()
+        };
+        applyFilters();
+    });
+
+    $('#refreshData').click(function() {
+        // Reload all data but keep current filters
+        loadAllData(true);
+    });
 
     $('#anomalyDetailsModal').on('show.bs.modal', function(event) {
         const button = $(event.relatedTarget);
@@ -184,8 +201,8 @@ function initCharts() {
 }
 
 // Load all data
-function loadAllData() {
-    document.getElementById('fetchApiData').click();
+function loadAllData(keepFilters = true) {
+//    document.getElementById('fetchApiData').click(); //commented out because we are only allowed 50 requests per day for free to use deepseek
     Promise.all([
         fetch('/api/traffic').then(res => res.json()),
         fetch('/api/anomalies').then(res => res.json())
@@ -201,12 +218,24 @@ function loadAllData() {
         // Update filters
         updateFilters();
 
-        // Update dashboard
-        updateDashboard();
-
-        // Update tables
-        updateTables();
-
+        // If we're keeping filters, restore them before applying
+        if (keepFilters) {
+            $('#timeRange').val(currentFilters.timeRange);
+            $('#networkFilter').val(currentFilters.networkId);
+            $('#nodeFilter').val(currentFilters.nodeId);
+            applyFilters();
+        } else {
+            // Set default filters
+            currentFilters = {
+                timeRange: '24',
+                networkId: 'all',
+                nodeId: 'all'
+            };
+            $('#timeRange').val('24');
+            $('#networkFilter').val('all');
+            $('#nodeFilter').val('all');
+            updateDashboard();
+        }
     })
     .catch(error => {
         console.error('Error loading data:', error);
@@ -246,6 +275,13 @@ function applyFilters() {
     const networkId = $('#networkFilter').val();
     const nodeId = $('#nodeFilter').val();
 
+    // Save current filters
+    currentFilters = {
+        timeRange: timeRange,
+        networkId: networkId,
+        nodeId: nodeId
+    };
+
     let filteredTraffic = [...trafficData];
     let filteredAnomalies = [...anomaliesData];
 
@@ -278,19 +314,22 @@ function applyFilters() {
         filteredAnomalies = filteredAnomalies.filter(item => item.nodeId == nodeId);
     }
 
-    // Update charts and tables with filtered data
-    updateCharts(filteredTraffic, filteredAnomalies);
-    updateTables(filteredTraffic, filteredAnomalies);
+    // Update dashboard with filtered data
+    updateDashboard(filteredTraffic, filteredAnomalies);
 }
 
 // Update dashboard with filtered data
-function updateDashboard() {
+function updateDashboard(trafficData = null, anomaliesData = null) {
+    // Use filtered data if provided, otherwise use all data
+    const displayTraffic = trafficData || this.trafficData;
+    const displayAnomalies = anomaliesData || this.anomaliesData;
+
     // Calculate metrics
-    const totalTraffic = trafficData.reduce((sum, item) => sum + item.trafficVolume, 0);
-    const activeNodes = new Set(trafficData.map(item => item.nodeId)).size;
-    const totalAnomalies = anomaliesData.length;
-    const criticalAlerts = anomaliesData.filter(anomaly =>
-        anomaly.anomalyType === 'Sudden Spike' || anomaly.anomalyType === 'Sudden Drop'
+    const totalTraffic = displayTraffic.reduce((sum, item) => sum + item.trafficVolume, 0);
+    const activeNodes = new Set(displayTraffic.map(item => item.nodeId)).size;
+    const totalAnomalies = displayAnomalies.length;
+    const criticalAlerts = displayAnomalies.filter(anomaly =>
+        anomaly.anomalyType === "SUDDEN_SPIKE" || anomaly.anomalyType === "SUDDEN_DROP"
     ).length;
 
     // Update metric cards
@@ -300,10 +339,10 @@ function updateDashboard() {
     $('#criticalAlerts').text(criticalAlerts);
 
     // Update charts
-    updateCharts(trafficData, anomaliesData);
+    updateCharts(displayTraffic, displayAnomalies);
 
     // Update recent anomalies table
-    const recentAnomalies = anomaliesData
+    const recentAnomalies = displayAnomalies
         .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
         .slice(0, 5);
 
@@ -323,6 +362,9 @@ function updateDashboard() {
             </tr>
         `);
     });
+
+    // Update tables
+    updateTables(displayTraffic, displayAnomalies);
 }
 
 // Update charts with filtered data
@@ -407,8 +449,6 @@ function updateTables(trafficData = [], anomaliesData = []) {
     anomaliesTable.draw();
 }
 
-
-
 // Load anomaly details for modal
 function loadAnomalyDetails(id) {
     fetch(`/api/anomalies/${id}`)
@@ -448,7 +488,6 @@ function loadAnomalyDetails(id) {
         });
 }
 
-
 function getAnomalyClass(type) {
     const lowerType = type.toLowerCase();
 
@@ -461,37 +500,37 @@ function getAnomalyClass(type) {
     return 'badge-other';
 }
 
-
 function getSuggestedActions(type) {
-    if (type.includes('spike')) {
+    const lowerType = type.toLowerCase();
+    if (lowerType.includes('spike')) {
         return [
             "Check for DDoS attacks on Node",
             "Verify if this is expected traffic (e.g., scheduled backup or software update)",
             "Monitor traffic patterns over time",
             "Review firewall and intrusion detection system logs"
         ];
-    } else if (type.includes('Drop')) {
+    } else if (lowerType.includes('drop')) {
         return [
             "Inspect network interface errors or collisions",
             "Verify routing paths between nodes",
             "Check for configuration mismatches or protocol errors",
             "Run connectivity diagnostics (e.g., ping, traceroute)"
         ];
-    } else if (type.includes('Zero')) {
+    } else if (lowerType.includes('zero')) {
         return [
             "Ensure the node is powered on and reachable",
             "Verify monitoring tool is correctly configured",
             "Check if the node was recently removed or decommissioned",
             "Inspect related system and application logs"
         ];
-    } else if (type.includes('High')) {
+    } else if (lowerType.includes('high')) {
         return [
             "Identify applications generating excess traffic",
             "Check QoS (Quality of Service) policies and limits",
             "Validate performance of connected services",
             "Monitor CPU and memory usage for spikes"
         ];
-    } else if (type.includes('Unusual')) {
+    } else if (lowerType.includes('unusual')) {
         return [
             "Compare with normal behavioral baselines",
             "Run packet analysis to identify unexpected patterns",
@@ -508,31 +547,93 @@ function getSuggestedActions(type) {
     }
 }
 
+// AI Overview
+document.getElementById('fetchApiData').addEventListener('click', async function() {
+    const outputDiv = document.getElementById('apiOutput');
+    outputDiv.innerHTML = "<strong>Loading analysis...</strong>";
 
-//AI Overview
- document.getElementById('fetchApiData').addEventListener('click', async function () {
-      const outputDiv = document.getElementById('apiOutput');
-      outputDiv.innerHTML = "<strong>Loading analysis...</strong>";
+    try {
+        const response = await fetch('/api/ai/analysis');
+        if (!response.ok) throw new Error('Network response was not ok');
 
-      try {
-          const response = await fetch('/api/ai/analysis');
-          if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        let content = data.choices?.[0]?.message?.content || '';
 
-          const data = await response.json();
-          let content = data.choices?.[0]?.message?.content || '';
+        // Simple cleanup - remove markdown code block markers if present
+        if (content.startsWith('```html') && content.endsWith('```')) {
+            content = content.slice(7, -3).trim(); // Remove both markers
+        } else if (content.startsWith('```') && content.endsWith('```')) {
+            content = content.slice(3, -3).trim(); // Handle non-html code blocks too
+        }
 
-          // Simple cleanup - remove markdown code block markers if present
-          if (content.startsWith('```html') && content.endsWith('```')) {
-              content = content.slice(7, -3).trim(); // Remove both markers
-          } else if (content.startsWith('```') && content.endsWith('```')) {
-              content = content.slice(3, -3).trim(); // Handle non-html code blocks too
-          }
+        // Insert the cleaned content
+        outputDiv.innerHTML = content || '<em>No content returned</em>';
+        outputDiv.scrollTop = outputDiv.scrollHeight;
 
-          // Insert the cleaned content
-          outputDiv.innerHTML = content || '<em>No content returned</em>';
-          outputDiv.scrollTop = outputDiv.scrollHeight;
+    } catch (error) {
+        outputDiv.textContent = 'Error fetching data: ' + error.message;
+    }
+});
 
-      } catch (error) {
-          outputDiv.textContent = 'Error fetching data: ' + error.message;
-      }
-  });
+
+//JSSortable for drag and drop of Dashboard Cards
+ document.addEventListener('DOMContentLoaded', function () {
+        const rowContainer = document.querySelector('#dashboard'); // Main container holding rows
+        const rowIds = ['dashboard-row-1', 'dashboard-row-2', 'dashboard-row-3'];
+
+        // Enable dragging of cards across rows
+        rowIds.forEach(id => {
+            const rowEl = document.getElementById(id);
+            new Sortable(rowEl, {
+                group: 'shared-cards',
+                animation: 150,
+                handle: '.card',
+                draggable: '.col-md-3, .col-md-4, .col-md-6, .col-md-8, .col-md-12', // any column
+                onSort: saveLayout
+            });
+        });
+
+        // Make rows themselves sortable
+        new Sortable(rowContainer, {
+            animation: 150,
+            handle: '.row',
+            draggable: '.row',
+            onSort: saveLayout
+        });
+
+        // Save layout to localStorage
+        function saveLayout() {
+            const layout = [];
+            document.querySelectorAll('#dashboard > .row').forEach(row => {
+                const rowLayout = [];
+                row.querySelectorAll('[class^="col-"]').forEach(col => {
+                    rowLayout.push(col.outerHTML);
+                });
+                layout.push(rowLayout);
+            });
+            localStorage.setItem('dashboardLayout', JSON.stringify(layout));
+        }
+
+        // Restore layout from localStorage
+        function loadLayout() {
+            const saved = localStorage.getItem('dashboardLayout');
+            if (!saved) return;
+            const layout = JSON.parse(saved);
+            const dashboard = document.getElementById('dashboard');
+            dashboard.innerHTML = ''; // Clear existing
+
+            layout.forEach(rowCols => {
+                const row = document.createElement('div');
+                row.className = 'row mb-4';
+                rowCols.forEach(colHTML => {
+                    const temp = document.createElement('div');
+                    temp.innerHTML = colHTML;
+                    const colEl = temp.firstElementChild;
+                    row.appendChild(colEl);
+                });
+                dashboard.appendChild(row);
+            });
+        }
+
+        loadLayout();
+    });
