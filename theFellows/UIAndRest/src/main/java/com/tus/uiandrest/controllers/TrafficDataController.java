@@ -40,6 +40,21 @@ public class TrafficDataController {
 //	   producer.sendTrafficData(data);
 //	   return ResponseEntity.accepted().build();
 //	}
+	/**
+	 * This is the POST method to send the traffic Data manually through the REST Swagger.
+	 * @param data TrafficDataDTO (in the form of JSON object)
+	 * @return ResponseEntity
+	 */
+	@PostMapping
+	public ResponseEntity<Void> sendTraffic(@RequestBody TrafficDataDTO data) {
+		TrafficData entity = new TrafficData();
+		entity.setNodeId(data.getNodeId());
+		entity.setNetworkId(data.getNetworkId());
+		entity.setTrafficVolume(data.getTrafficVolume());
+		entity.setTimestamp(data.getTimestamp());
+		trafficRepo.save(entity);
+		return ResponseEntity.accepted().build();
+	}
 	
 	@Operation(summary = "Get all traffic data")
 	@ApiResponse(responseCode = "200", description = "OK")
