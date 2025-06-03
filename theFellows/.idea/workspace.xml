@@ -5,38 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/repository/AnomalyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/repository/AnomalyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/service/AnomalyDetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/service/AnomalyDetectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/classes/com/tus/anomalydetection/repository/AnomalyRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/classes/com/tus/anomalydetection/service/AnomalyDetectionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/TEST-com.tus.anomalydetection.AnomalyDetectionApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/com.tus.anomalydetection.AnomalyDetectionApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/test-classes/com/tus/anomalydetection/AnomalyDetectionApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/TrafficScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/TrafficScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/service/ScheduledLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/service/ScheduledLogicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/scheduler/TrafficScheduler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/classes/com/tus/trafficsimulator/service/ScheduledLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/TrafficDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/TrafficDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/repositories/AnomalyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/repositories/AnomalyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/target/classes/com/tus/uiandrest/controllers/TrafficDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/classes/com/tus/uiandrest/controllers/TrafficDataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/target/classes/com/tus/uiandrest/repositories/AnomalyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/classes/com/tus/uiandrest/repositories/AnomalyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/AnomalyDetection-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/TEST-com.tus.anomalydetection.AnomalyDetectionApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/TEST-com.tus.anomalydetection.AnomalyDetectionApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/com.tus.anomalydetection.AnomalyDetectionApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/target/surefire-reports/com.tus.anomalydetection.AnomalyDetectionApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/TrafficSimulator-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/surefire-reports/TEST-com.tus.trafficsimulator.TrafficSimulatorApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/surefire-reports/TEST-com.tus.trafficsimulator.TrafficSimulatorApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/target/surefire-reports/com.tus.trafficsimulator.TrafficSimulatorApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/target/surefire-reports/com.tus.trafficsimulator.TrafficSimulatorApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/UIAndRest-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/target/surefire-reports/TEST-com.tus.uiandrest.UiAndRestApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/surefire-reports/TEST-com.tus.uiandrest.UiAndRestApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/target/surefire-reports/com.tus.uiandrest.UiAndRestApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/target/surefire-reports/com.tus.uiandrest.UiAndRestApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/AnomalyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/AnomalyDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/Anomaly.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/Anomaly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/Anomaly.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/Anomaly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/TrafficData.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/tus/common/entity/TrafficData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +82,7 @@
     "Spring Boot.AnomalyDetectionApplication.executor": "Run",
     "Spring Boot.TrafficSimulatorApplication.executor": "Run",
     "Spring Boot.UiAndRestApplication.executor": "Run",
-    "git-widget-placeholder": "anomaly__detection__merge",
+    "git-widget-placeholder": "development",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/scott/Documents/GitHub/TNF/theFellows/UIAndRest/src/test/resources",
     "node.js.detected.package.eslint": "true",

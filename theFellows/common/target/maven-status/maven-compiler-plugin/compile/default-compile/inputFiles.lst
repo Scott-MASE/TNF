@@ -1,6 +1,6 @@
 /Users/scott/Documents/GitHub/TNF/theFellows/common/src/main/java/com/tus/common/CommonApplication.java
-/Users/scott/Documents/GitHub/TNF/theFellows/common/src/main/java/com/tus/common/dto/AnomalyDTO.java
 /Users/scott/Documents/GitHub/TNF/theFellows/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java
-/Users/scott/Documents/GitHub/TNF/theFellows/common/src/main/java/com/tus/common/entity/Anomaly.java
 /Users/scott/Documents/GitHub/TNF/theFellows/common/src/main/java/com/tus/common/entity/AnomalyType.java
 /Users/scott/Documents/GitHub/TNF/theFellows/common/src/main/java/com/tus/common/entity/TrafficData.java
+/Users/scott/Documents/GitHub/TNF/theFellows/common/src/main/java/com/tus/common/dto/AnomalyDTO.java
+/Users/scott/Documents/GitHub/TNF/theFellows/common/src/main/java/com/tus/common/entity/Anomaly.java

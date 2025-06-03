@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-
+@Data
+@NoArgsConstructor
 @Entity
 @Table(name = "traffic_data")
 public class TrafficData {
@@ -27,40 +28,7 @@ public class TrafficData {
         this.trafficVolume = trafficVolume;
         this.timestamp = timestamp;
     }
-
-    public TrafficData() {
-    }
-
-    public Integer getNodeId() {
-        return nodeId;
-    }
-
-    public void setNodeId(Integer nodeId) {
-        this.nodeId = nodeId;
-    }
-
-    public Integer getNetworkId() {
-        return networkId;
-    }
-
-    public void setNetworkId(Integer networkId) {
-        this.networkId = networkId;
-    }
-
-    public Double getTrafficVolume() {
-        return trafficVolume;
-    }
-
-    public void setTrafficVolume(Double trafficVolume) {
-        this.trafficVolume = trafficVolume;
-    }
-
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(LocalDateTime timestamp) {
-        this.timestamp = timestamp;
-    }
 }
+
+
 
