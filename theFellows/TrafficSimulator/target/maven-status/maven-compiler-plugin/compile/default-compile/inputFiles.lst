@@ -1,5 +1,5 @@
-/Users/scott/Documents/GitHub/TNF/theFellows/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/TrafficScheduler.java
 /Users/scott/Documents/GitHub/TNF/theFellows/TrafficSimulator/src/main/java/com/tus/trafficsimulator/TrafficSimulatorApplication.java
 /Users/scott/Documents/GitHub/TNF/theFellows/TrafficSimulator/src/main/java/com/tus/trafficsimulator/kafka/TrafficDataProducer.java
 /Users/scott/Documents/GitHub/TNF/theFellows/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java
+/Users/scott/Documents/GitHub/TNF/theFellows/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/TrafficScheduler.java
 /Users/scott/Documents/GitHub/TNF/theFellows/TrafficSimulator/src/main/java/com/tus/trafficsimulator/service/ScheduledLogicService.java

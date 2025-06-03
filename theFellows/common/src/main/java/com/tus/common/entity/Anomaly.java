@@ -7,69 +7,75 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Entity
-@Table(name = "anomalies")
+@Table(name = "anomalies", uniqueConstraints = {
+		@UniqueConstraint(columnNames = { "nodeId", "networkId", "datetime" }) })
 public class Anomaly {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    private Integer nodeId;
-    private Integer networkId;
-    private String anomalyType;
-    private Double trafficVolume;
-    @Column(name = "datetime")
-    private LocalDateTime timestamp;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    public Long getId() {
-        return id;
-    }
+	private Integer nodeId;
+	
+	private Integer networkId;
 
-    public Integer getNodeId() {
-        return nodeId;
-    }
+	@Enumerated(EnumType.STRING)
+	private AnomalyType anomalyType;
+	
+	private Double trafficVolume;
+	
+	@Column(name = "datetime")
+	private LocalDateTime timestamp;
 
-    public Integer getNetworkId() {
-        return networkId;
-    }
+	public Anomaly(Integer nodeId, Integer networkId, AnomalyType anomalyType, Double trafficVolume, LocalDateTime timestamp) {
+		this.nodeId = nodeId;
+		this.networkId = networkId;
+		this.anomalyType = anomalyType;
+		this.trafficVolume = trafficVolume;
+		this.timestamp = timestamp;
+	}
 
-    public String getAnomalyType() {
-        return anomalyType;
-    }
+	public Anomaly() {
+	}
 
-    public Double getTrafficVolume() {
-        return trafficVolume;
-    }
+	public Integer getNodeId() {
+		return nodeId;
+	}
 
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
+	public void setNodeId(Integer nodeId) {
+		this.nodeId = nodeId;
+	}
 
-    // Setters
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Integer getNetworkId() {
+		return networkId;
+	}
 
-    public void setNodeId(Integer nodeId) {
-        this.nodeId = nodeId;
-    }
+	public void setNetworkId(Integer networkId) {
+		this.networkId = networkId;
+	}
 
-    public void setNetworkId(Integer networkId) {
-        this.networkId = networkId;
-    }
+	public AnomalyType getAnomalyType() {
+		return anomalyType;
+	}
 
-    public void setAnomalyType(String anomalyType) {
-        this.anomalyType = anomalyType;
-    }
+	public void setAnomalyType(AnomalyType anomalyType) {
+		this.anomalyType = anomalyType;
+	}
 
-    public void setTrafficVolume(Double trafficVolume) {
-        this.trafficVolume = trafficVolume;
-    }
+	public Double getTrafficVolume() {
+		return trafficVolume;
+	}
 
-    public void setTimestamp(LocalDateTime timestamp) {
-        this.timestamp = timestamp;
-    }
+	public void setTrafficVolume(Double trafficVolume) {
+		this.trafficVolume = trafficVolume;
+	}
+
+	public LocalDateTime getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(LocalDateTime timestamp) {
+		this.timestamp = timestamp;
+	}
 }
