@@ -1,6 +1,6 @@
+/Users/scott/Documents/GitHub/TNF/theFellows/AnomalyDetection/src/main/java/com/tus/anomalydetection/AnomalyDetectionApplication.java
+/Users/scott/Documents/GitHub/TNF/theFellows/AnomalyDetection/src/main/java/com/tus/anomalydetection/config/KafkaConsumerConfig.java
 /Users/scott/Documents/GitHub/TNF/theFellows/AnomalyDetection/src/main/java/com/tus/anomalydetection/kafka/TrafficDataConsumer.java
 /Users/scott/Documents/GitHub/TNF/theFellows/AnomalyDetection/src/main/java/com/tus/anomalydetection/repository/AnomalyRepository.java
 /Users/scott/Documents/GitHub/TNF/theFellows/AnomalyDetection/src/main/java/com/tus/anomalydetection/repository/TrafficDataRepository.java
 /Users/scott/Documents/GitHub/TNF/theFellows/AnomalyDetection/src/main/java/com/tus/anomalydetection/service/AnomalyDetectionService.java
-/Users/scott/Documents/GitHub/TNF/theFellows/AnomalyDetection/src/main/java/com/tus/anomalydetection/AnomalyDetectionApplication.java
-/Users/scott/Documents/GitHub/TNF/theFellows/AnomalyDetection/src/main/java/com/tus/anomalydetection/config/KafkaConsumerConfig.java

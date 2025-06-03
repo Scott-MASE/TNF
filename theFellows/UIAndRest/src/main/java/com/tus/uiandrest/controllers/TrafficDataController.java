@@ -21,21 +21,25 @@ public class TrafficDataController {
 
 	private TrafficDataRepository trafficRepo;
 	
-	private TrafficDataProducer producer;
+//	private TrafficDataProducer producer;
+
+//	public TrafficDataController(TrafficDataRepository trafficRepo, TrafficDataProducer producer) {
+//		this.trafficRepo = trafficRepo;
+//		this.producer = producer;
+//	}
 	
-	public TrafficDataController(TrafficDataRepository trafficRepo, TrafficDataProducer producer) {
+	public TrafficDataController(TrafficDataRepository trafficRepo) {
 		this.trafficRepo = trafficRepo;
-		this.producer = producer;
 	}
 	
-	@Operation(summary = "Send traffic data (via Kafka)")
-	@ApiResponse(responseCode = "202", description = "Accepted")
-	@PostMapping
-	public ResponseEntity<Void> sendTraffic(@RequestBody TrafficDataDTO data) {
-		 System.out.println("MY DATA THROUGH POST^^^^^^^^^^^^^^:"+data.getNodeId()+"::"+data.getNetworkId()+"::"+data.getTrafficVolume());
-	   producer.sendTrafficData(data);
-	   return ResponseEntity.accepted().build();
-	}
+//	@Operation(summary = "Send traffic data (via Kafka)")
+//	@ApiResponse(responseCode = "202", description = "Accepted")
+//	@PostMapping
+//	public ResponseEntity<Void> sendTraffic(@RequestBody TrafficDataDTO data) {
+//		 System.out.println("MY DATA THROUGH POST^^^^^^^^^^^^^^:"+data.getNodeId()+"::"+data.getNetworkId()+"::"+data.getTrafficVolume());
+//	   producer.sendTrafficData(data);
+//	   return ResponseEntity.accepted().build();
+//	}
 	
 	@Operation(summary = "Get all traffic data")
 	@ApiResponse(responseCode = "200", description = "OK")

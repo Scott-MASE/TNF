@@ -1,4 +1,6 @@
 com/tus/common/dto/TrafficDataDTO.class
 com/tus/common/entity/Anomaly.class
-com/tus/common/CommonApplication.class
 com/tus/common/entity/TrafficData.class
+com/tus/common/dto/AnomalyDTO.class
+com/tus/common/CommonApplication.class
+com/tus/common/entity/AnomalyType.class

@@ -1,5 +1,3 @@
 com/tus/trafficsimulator/kafka/TrafficDataProducer.class
 com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.class
-com/tus/trafficsimulator/scheduler/TrafficScheduler.class
-com/tus/trafficsimulator/service/ScheduledLogicService.class
 com/tus/trafficsimulator/TrafficSimulatorApplication.class

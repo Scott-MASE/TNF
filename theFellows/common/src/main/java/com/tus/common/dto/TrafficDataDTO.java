@@ -57,12 +57,4 @@ public class TrafficDataDTO {
  public void setTimestamp(LocalDateTime timestamp) {
   this.timestamp = timestamp;
  }
-
- public Long getId() {
-  return id;
- }
-
- public void setId(Long id) {
-  this.id = id;
- }
 }
