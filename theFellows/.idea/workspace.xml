@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrafficSimulator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UIAndRest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/test/java/selenium/NetworkDashboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/test/java/selenium/NetworkDashboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,46 +47,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.All in AnomalyDetection.executor": "Coverage",
-    "JUnit.All in TrafficSimulator.executor": "Coverage",
-    "JUnit.All in UIAndRest.executor": "Run",
-    "JUnit.All in theFellows (1).executor": "Run",
-    "JUnit.All in theFellows.executor": "Coverage",
-    "JUnit.AnomalyDetectionApplicationTests.executor": "Run",
-    "JUnit.NetworkDashboardTest (1).executor": "Run",
-    "JUnit.NetworkDashboardTest.executor": "Run",
-    "JUnit.NetworkDashboardTest.testApplyFiltersButton.executor": "Run",
-    "JUnit.TrafficSimulatorApplicationTests.executor": "Run",
-    "JUnit.UiAndRestApplicationTests.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AnomalyDetectionApplication (1).executor": "Run",
-    "Spring Boot.AnomalyDetectionApplication.executor": "Run",
-    "Spring Boot.TrafficSimulatorApplication.executor": "Run",
-    "Spring Boot.UiAndRestApplication.executor": "Run",
-    "git-widget-placeholder": "development",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/A00283448/Documents/GitHub/TNF/theFellows",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in AnomalyDetection.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in TrafficSimulator.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in UIAndRest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in theFellows (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in theFellows.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AnomalyDetectionApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NetworkDashboardTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NetworkDashboardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NetworkDashboardTest.testApplyFiltersButton.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TrafficSimulatorApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UiAndRestApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AnomalyDetectionApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AnomalyDetectionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TrafficSimulatorApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UiAndRestApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/A00283448/Documents/GitHub/TNF/theFellows&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/UIAndRest/src/test/resources" />

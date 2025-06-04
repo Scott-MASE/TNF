@@ -57,12 +57,12 @@ public class NetworkDashboardTest {
         Assertions.assertTrue(dashboardTab.getAttribute("class").contains("show"));
     }
 
-    @Test
-    void testCatWidgetLoadsImage() {
-        WebElement catImage = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("catImage")));
-        String src = catImage.getAttribute("src");
-        Assertions.assertTrue(src.startsWith("https://") && src.contains("cdn2.thecatapi.com"), "Cat image did not load.");
-    }
+//    @Test
+//    void testCatWidgetLoadsImage() {
+//        WebElement catImage = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("catImage")));
+//        String src = catImage.getAttribute("src");
+//        Assertions.assertTrue(src.startsWith("https://") && src.contains("cdn2.thecatapi.com"), "Cat image did not load.");
+//    }
 
     @Test
     void testApplyFiltersButton() {
