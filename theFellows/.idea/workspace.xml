@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/src/test/java/selenium/NetworkDashboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/test/java/selenium/NetworkDashboardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in AnomalyDetection.executor": "Coverage",
+    "JUnit.All in TrafficSimulator.executor": "Coverage",
+    "JUnit.All in UIAndRest.executor": "Run",
+    "JUnit.All in theFellows (1).executor": "Run",
+    "JUnit.All in theFellows.executor": "Coverage",
     "JUnit.AnomalyDetectionApplicationTests.executor": "Run",
     "JUnit.NetworkDashboardTest (1).executor": "Run",
     "JUnit.NetworkDashboardTest.executor": "Run",
@@ -105,71 +112,43 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.NetworkDashboardTest (1)">
-    <configuration name="AnomalyDetectionApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrafficSimulator (1)" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tus.anomalydetection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tus.anomalydetection" />
-      <option name="MAIN_CLASS_NAME" value="com.tus.anomalydetection.AnomalyDetectionApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunManager" selected="JUnit.All in UIAndRest">
+    <configuration name="All in AnomalyDetection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AnomalyDetection" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkDashboardTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UIAndRest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="selenium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="selenium" />
-      <option name="MAIN_CLASS_NAME" value="selenium.NetworkDashboardTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="All in TrafficSimulator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrafficSimulator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkDashboardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in UIAndRest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UIAndRest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NetworkDashboardTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkDashboardTest.testApplyFiltersButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UIAndRest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="selenium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="selenium" />
-      <option name="MAIN_CLASS_NAME" value="selenium.NetworkDashboardTest" />
-      <option name="METHOD_NAME" value="testApplyFiltersButton" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="All in theFellows (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="theFellows" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnomalyDetectionApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="AnomalyDetection" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tus.anomalydetection.AnomalyDetectionApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tus.anomalydetection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="All in theFellows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="theFellows" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,23 +182,23 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.NetworkDashboardTest (1)" />
-      <item itemvalue="JUnit.NetworkDashboardTest" />
-      <item itemvalue="JUnit.NetworkDashboardTest.testApplyFiltersButton" />
-      <item itemvalue="JUnit.AnomalyDetectionApplicationTests" />
+      <item itemvalue="JUnit.All in AnomalyDetection" />
+      <item itemvalue="JUnit.All in TrafficSimulator" />
+      <item itemvalue="JUnit.All in UIAndRest" />
+      <item itemvalue="JUnit.All in theFellows" />
+      <item itemvalue="JUnit.All in theFellows (1)" />
       <item itemvalue="Spring Boot.AnomalyDetectionApplication" />
       <item itemvalue="Spring Boot.CommonApplication" />
       <item itemvalue="Spring Boot.TrafficSimulatorApplication" />
       <item itemvalue="Spring Boot.UiAndRestApplication" />
-      <item itemvalue="Spring Boot.AnomalyDetectionApplication (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.NetworkDashboardTest (1)" />
-        <item itemvalue="JUnit.NetworkDashboardTest.testApplyFiltersButton" />
-        <item itemvalue="JUnit.NetworkDashboardTest" />
-        <item itemvalue="Spring Boot.AnomalyDetectionApplication (1)" />
-        <item itemvalue="JUnit.AnomalyDetectionApplicationTests" />
+        <item itemvalue="JUnit.All in UIAndRest" />
+        <item itemvalue="JUnit.All in theFellows (1)" />
+        <item itemvalue="JUnit.All in TrafficSimulator" />
+        <item itemvalue="JUnit.All in AnomalyDetection" />
+        <item itemvalue="JUnit.All in theFellows" />
       </list>
     </recent_temporary>
   </component>
@@ -250,5 +229,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/theFellows$All_in_theFellows.ic" NAME="All in theFellows Coverage Results" MODIFIED="1749042822755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator.ic" NAME="All in TrafficSimulator Coverage Results" MODIFIED="1749042975942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection.ic" NAME="All in AnomalyDetection Coverage Results" MODIFIED="1749042841221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
