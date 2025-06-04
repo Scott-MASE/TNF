@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: traffic-simulator
+  name: trafficsimulator
   namespace: thefellows-namespace
   labels:
-    app: traffic-simulator
+    app: trafficsimulator
 spec:
   replicas: 1
   selector:

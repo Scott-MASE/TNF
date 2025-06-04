@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ui-and-rest
+  name: uiandrest
   namespace: thefellows-namespace
   labels:
-    app: ui-and-rest
+    app: uiandrest
 spec:
   replicas: 1
   selector:
