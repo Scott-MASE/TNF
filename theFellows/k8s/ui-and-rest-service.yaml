@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui-and-rest-svc
+  namespace: thefellows-namespace
+spec:
+  selector:
+    app: ui-and-rest
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9095
+  type: ClusterIP

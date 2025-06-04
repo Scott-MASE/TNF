@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anomaly-detection
+  namespace: thefellows-namespace
+  labels:
+    app: anomaly-detection
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anomaly-detection
+  template:
+    metadata:
+      labels:
+        app: anomaly-detection
+    spec:
+      containers:
+        - name: anomaly-detection
+          image: anomaly-detection:latest
+          ports:
+            - containerPort: 9097
+          env:
+            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+              value: kafka:9092
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://host.docker.internal:3306/anomalydb
+            # value: jdbc:mysql://mysql-svc:3306/anomalydb
