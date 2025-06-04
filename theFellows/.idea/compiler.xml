@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TrafficSimulator (2)" />
+        <module name="AnomalyDetection" />
+        <module name="TrafficSimulator" />
         <module name="TrafficSimulator (1)" />
         <module name="UIAndRest" />
       </profile>
@@ -24,6 +26,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AnomalyDetection" options="-parameters" />
+      <module name="TrafficSimulator" options="-parameters" />
       <module name="TrafficSimulator (1)" options="-parameters" />
       <module name="TrafficSimulator (2)" options="-parameters" />
       <module name="UIAndRest" options="-parameters" />
