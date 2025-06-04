@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
         - name: traffic-simulator
-          image: traffic-simulator:latest
+          image: docker.io/scottwhat/traffic-simulator:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9091
           env:
