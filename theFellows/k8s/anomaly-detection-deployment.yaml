@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: anomaly-detection
-          image: docker.io/scottwhat/anomaly-detection:latest
+          image: docker.io/scottwhat/anomalydetection:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9097

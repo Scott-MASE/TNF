@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: ui-and-rest
-          image: docker.io/scottwhat/ui-and-rest:latest
+          image: docker.io/scottwhat/uiandrest:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9095
