@@ -1,9 +1,10 @@
-package com.tus.anomalydetection.service;
+package com.tus.anomalydetection.kafka;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
+import com.tus.anomalydetection.service.AnomalyDetectionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
