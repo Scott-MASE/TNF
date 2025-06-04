@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: traffic-simulator-svc
+  name: trafficsimulator-svc
   namespace: thefellows-namespace
 spec:
   selector:
-    app: traffic-simulator
+    app: trafficsimulator
   ports:
     - protocol: TCP
       port: 80

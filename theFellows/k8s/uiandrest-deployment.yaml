@@ -9,14 +9,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ui-and-rest
+      app: uiandrest
   template:
     metadata:
       labels:
-        app: ui-and-rest
+        app: uiandrest
     spec:
       containers:
-        - name: ui-and-rest
+        - name: uiandrest
           image: docker.io/scottwhat/uiandrest:latest
           imagePullPolicy: IfNotPresent
           ports:

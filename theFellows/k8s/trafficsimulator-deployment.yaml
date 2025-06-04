@@ -9,14 +9,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: traffic-simulator
+      app: trafficsimulator
   template:
     metadata:
       labels:
-        app: traffic-simulator
+        app: trafficsimulator
     spec:
       containers:
-        - name: traffic-simulator
+        - name: trafficsimulator
           image: docker.io/scottwhat/trafficsimulator:latest
           imagePullPolicy: IfNotPresent
           ports:

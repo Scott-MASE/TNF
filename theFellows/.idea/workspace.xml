@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="" />
+    <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/anomalydetection-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/anomalydetection-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/anomalydetection-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/anomalydetection-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/trafficsimulator-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/trafficsimulator-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/trafficsimulator-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/trafficsimulator-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/uiandrest-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/uiandrest-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/uiandrest-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/uiandrest-service.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

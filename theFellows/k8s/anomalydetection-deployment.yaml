@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: anomaly-detection
+  name: anomalydetection
   namespace: thefellows-namespace
   labels:
-    app: anomaly-detection
+    app: anomalydetection
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: anomaly-detection
+      app: anomalydetection
   template:
     metadata:
       labels:
-        app: anomaly-detection
+        app: anomalydetection
     spec:
       containers:
-        - name: anomaly-detection
+        - name: anomalydetection
           image: docker.io/scottwhat/anomalydetection:latest
           imagePullPolicy: IfNotPresent
           ports:
