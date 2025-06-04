@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/UIAndRest/src/test/java/selenium/NetworkDashboardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIAndRest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/test/java/selenium/NetworkDashboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/test/java/selenium/NetworkDashboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +47,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.AnomalyDetectionApplicationTests.executor": "Run",
+    "JUnit.NetworkDashboardTest (1).executor": "Run",
     "JUnit.NetworkDashboardTest.executor": "Run",
     "JUnit.NetworkDashboardTest.testApplyFiltersButton.executor": "Run",
     "JUnit.TrafficSimulatorApplicationTests.executor": "Run",
@@ -67,7 +65,7 @@
     "Spring Boot.AnomalyDetectionApplication.executor": "Run",
     "Spring Boot.TrafficSimulatorApplication.executor": "Run",
     "Spring Boot.UiAndRestApplication.executor": "Run",
-    "git-widget-placeholder": "selenium__tests",
+    "git-widget-placeholder": "development",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/A00283448/Documents/GitHub/TNF/theFellows",
@@ -107,7 +105,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TrafficSimulatorApplication">
+  <component name="RunManager" selected="JUnit.NetworkDashboardTest (1)">
     <configuration name="AnomalyDetectionApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrafficSimulator (1)" />
       <extension name="coverage">
@@ -118,6 +116,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.tus.anomalydetection" />
       <option name="MAIN_CLASS_NAME" value="com.tus.anomalydetection.AnomalyDetectionApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NetworkDashboardTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UIAndRest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.NetworkDashboardTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,21 +157,6 @@
       <option name="MAIN_CLASS_NAME" value="selenium.NetworkDashboardTest" />
       <option name="METHOD_NAME" value="testApplyFiltersButton" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrafficSimulatorApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrafficSimulator (2)" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tus.trafficsimulator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tus.trafficsimulator" />
-      <option name="MAIN_CLASS_NAME" value="com.tus.trafficsimulator.TrafficSimulatorApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -205,10 +203,10 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.NetworkDashboardTest (1)" />
       <item itemvalue="JUnit.NetworkDashboardTest" />
       <item itemvalue="JUnit.NetworkDashboardTest.testApplyFiltersButton" />
       <item itemvalue="JUnit.AnomalyDetectionApplicationTests" />
-      <item itemvalue="JUnit.TrafficSimulatorApplicationTests" />
       <item itemvalue="Spring Boot.AnomalyDetectionApplication" />
       <item itemvalue="Spring Boot.CommonApplication" />
       <item itemvalue="Spring Boot.TrafficSimulatorApplication" />
@@ -217,11 +215,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NetworkDashboardTest (1)" />
         <item itemvalue="JUnit.NetworkDashboardTest.testApplyFiltersButton" />
         <item itemvalue="JUnit.NetworkDashboardTest" />
         <item itemvalue="Spring Boot.AnomalyDetectionApplication (1)" />
         <item itemvalue="JUnit.AnomalyDetectionApplicationTests" />
-        <item itemvalue="JUnit.TrafficSimulatorApplicationTests" />
       </list>
     </recent_temporary>
   </component>

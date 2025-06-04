@@ -1,12 +1,22 @@
 package selenium;
 
+import com.tus.uiandrest.UiAndRestApplication;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
 
 import java.time.Duration;
 
+@SpringBootTest(
+        classes = com.tus.uiandrest.UiAndRestApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT
+)
+@TestPropertySource(properties = {
+        "server.port=9095"
+})
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class NetworkDashboardTest {
     private WebDriver driver;
@@ -68,4 +78,6 @@ public class NetworkDashboardTest {
         WebElement tab = driver.findElement(By.cssSelector("a[href='#" + tabId + "']"));
         tab.click();
     }
+
+
 }
