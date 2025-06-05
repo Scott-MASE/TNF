@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/config/KafkaConsumerConfigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/scheduler/TrafficSchedulerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/test/java/com/tus/trafficsimulator/kafka/TrafficDataProducerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrafficSimulator/src/test/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIAndRest/src/test/java/com/tus/uiandrest/controller/AIControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIAndRest/src/test/java/com/tus/uiandrest/controller/AIControllerTestConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/test/java/dto/AnomalyDTOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/test/java/dto/TrafficDataDTOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/test/java/entity/AnomalyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/test/java/entity/TrafficDataTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/TrafficDataConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/kafka/TrafficDataConsumerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="development" />
+        <entry key="$PROJECT_DIR$/.." value="test_coverage" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -133,7 +125,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in TrafficSimulator (1)">
+  <component name="RunManager" selected="JUnit.com.tus.uiandrest.controller in UIAndRest">
+    <configuration name="All in AnomalyDetection (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AnomalyDetection" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in TrafficSimulator (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrafficSimulator" />
       <option name="PACKAGE_NAME" value="" />
@@ -150,28 +150,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in UIAndRest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UIAndRest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in theFellows (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="theFellows" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Whole project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.tus.uiandrest.controller in UIAndRest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UIAndRest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tus.uiandrest.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tus.uiandrest.controller" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -205,19 +203,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.All in AnomalyDetection (1)" />
+      <item itemvalue="JUnit.com.tus.uiandrest.controller in UIAndRest" />
       <item itemvalue="JUnit.All in TrafficSimulator (1)" />
       <item itemvalue="JUnit.Whole project" />
       <item itemvalue="JUnit.All in TrafficSimulator" />
-      <item itemvalue="JUnit.All in UIAndRest" />
-      <item itemvalue="JUnit.All in theFellows (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.tus.uiandrest.controller in UIAndRest" />
         <item itemvalue="JUnit.All in TrafficSimulator (1)" />
         <item itemvalue="JUnit.All in TrafficSimulator" />
-        <item itemvalue="JUnit.All in UIAndRest" />
+        <item itemvalue="JUnit.All in AnomalyDetection (1)" />
         <item itemvalue="JUnit.Whole project" />
-        <item itemvalue="JUnit.All in theFellows (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +259,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection.ic" NAME="All in AnomalyDetection Coverage Results" MODIFIED="1749062927476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection__1_.ic" NAME="All in AnomalyDetection (1) Coverage Results" MODIFIED="1749119238897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection.ic" NAME="All in AnomalyDetection Coverage Results" MODIFIED="1749119332918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator.ic" NAME="All in TrafficSimulator Coverage Results" MODIFIED="1749042975942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/theFellows$All_in_theFellows.ic" NAME="All in theFellows Coverage Results" MODIFIED="1749042822755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
