@@ -57,7 +57,7 @@ public class ScheduledTrafficSimulator {
         }
         
         producer.sendTrafficData(data);
-        logger.info("Sent simulated traffic data (" + pattern + "): " + data);
+        logger.info("Sent simulated traffic data ({}) : {}", pattern, data);
     }
     
     private TrafficPattern choosePattern(LocalDateTime now) {

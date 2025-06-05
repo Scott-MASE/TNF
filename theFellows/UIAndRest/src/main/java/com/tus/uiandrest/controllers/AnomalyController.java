@@ -20,7 +20,7 @@ import java.util.List;
 @Tag(name = "Anomalies", description = "Anomaly API")
 public class AnomalyController {
 
-    @Autowired
+
     private AnomalyRepository anomalyRepo;
 
     public AnomalyController(AnomalyRepository anomalyRepo){

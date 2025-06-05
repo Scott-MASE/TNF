@@ -41,6 +41,5 @@ class TrafficDataConsumerTest {
         consumer.consumeTrafficData(dto);
 
         verify(repository, times(1)).save(any(TrafficData.class));
-        //verify(anomalyService, times(1)).checkForAnomaly(any(TrafficData.class));
     }
 }

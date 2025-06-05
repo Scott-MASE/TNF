@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -34,41 +36,6 @@ class TrafficDataProducerTest {
         producer = new TrafficDataProducer(kafkaTemplate, "test-topic"); 
     }
 
-    @Test
-    void testSendZeroTraffic() {
-        TrafficDataDTO dto = baseDTO();
-        dto.setTrafficVolume(0.0);
-
-        producer.sendTrafficData(dto);
-        verify(kafkaTemplate, times(ONE_TIME)).send(anyString(), eq(dto));
-    }
-
-    @Test
-    void testSendHighTraffic() {
-        TrafficDataDTO dto = baseDTO();
-        dto.setTrafficVolume(3000.0); // Above high threshold
-
-        producer.sendTrafficData(dto);
-        verify(kafkaTemplate, times(ONE_TIME)).send(anyString(), eq(dto));
-    }
-
-    @Test
-    void testSendSuddenSpike() {
-        TrafficDataDTO dto = baseDTO();
-        dto.setTrafficVolume(4000.0); // Simulate a spike
-
-        producer.sendTrafficData(dto);
-        verify(kafkaTemplate, times(ONE_TIME)).send(anyString(), eq(dto));
-    }
-
-    @Test
-    void testSendSuddenDrop() {
-        TrafficDataDTO dto = baseDTO();
-        dto.setTrafficVolume(40.0); // Simulate a drop
-
-        producer.sendTrafficData(dto);
-        verify(kafkaTemplate, times(ONE_TIME)).send(anyString(), eq(dto));
-    }
 
     @Test
     void testSendUnusualNightTraffic() {
@@ -80,12 +47,14 @@ class TrafficDataProducerTest {
         verify(kafkaTemplate, times(ONE_TIME)).send(anyString(), eq(dto));
     }
 
-    @Test
-    void testSendNormalTraffic() {
+    @ParameterizedTest
+    @ValueSource(doubles = {0.0, 3000.0, 4000.0, 40.0, 600.0})
+    void testSendVariousTrafficVolumes(double trafficVolume) {
         TrafficDataDTO dto = baseDTO();
-        dto.setTrafficVolume(600.0); // Normal range
+        dto.setTrafficVolume(trafficVolume);
 
         producer.sendTrafficData(dto);
+
         verify(kafkaTemplate, times(ONE_TIME)).send(anyString(), eq(dto));
     }
 

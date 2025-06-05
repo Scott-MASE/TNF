@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -74,36 +76,18 @@ class AnomalyDetectionServiceTest {
 		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
 	}
 
-	@Test
-	void testSuddenDrop() {
-		// Simulate a sudden drop in traffic volume
-		data.setTrafficVolume(10.0);
+
+	@ParameterizedTest
+	@CsvSource({
+			"10.0, 1",      // Sudden drop
+			"3000.0, 1",    // Sudden spike
+			"1100.0, 1"
+	})
+	void testTrafficVolumeAnomalyDetection(double trafficVolume, int expectedSaves) {
+		data.setTrafficVolume(trafficVolume);
 
 		anomalyDetectionService.checkForAnomaly(data);
 
-		// Verify anomaly is saved
-		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
-	}
-
-	@Test
-	void testSuddenSpike() {
-		// Simulate a sudden spike in traffic volume
-		data.setTrafficVolume(3000.0);
-
-		anomalyDetectionService.checkForAnomaly(data);
-
-		// Verify anomaly is saved
-		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
-	}
-
-	@Test
-	void testNoAnomalyDetected() {
-		// Simulate normal traffic volume
-		data.setTrafficVolume(1100.0);
-
-		anomalyDetectionService.checkForAnomaly(data);
-
-		// Verify no anomaly is saved
-		verify(anomalyRepository, times(ONE_TIME)).save(any(Anomaly.class));
+		verify(anomalyRepository, times(expectedSaves)).save(any(Anomaly.class));
 	}
 }
