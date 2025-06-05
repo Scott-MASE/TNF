@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trafficsimulator
+  namespace: thefellows-namespace
+  labels:
+    app: trafficsimulator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trafficsimulator
+  template:
+    metadata:
+      labels:
+        app: trafficsimulator
+    spec:
+      containers:
+        - name: trafficsimulator
+          image: docker.io/scottwhat/trafficsimulator:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9091
+          env:
+            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+              value: kafka:9092

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uiandrest
+  namespace: thefellows-namespace
+  labels:
+    app: uiandrest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: uiandrest
+  template:
+    metadata:
+      labels:
+        app: uiandrest
+    spec:
+      containers:
+        - name: uiandrest
+          image: docker.io/scottwhat/uiandrest:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9095
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://host.docker.internal:3306/anomalydb
