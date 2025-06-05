@@ -18,8 +18,11 @@ import java.util.Map;
 @Tag(name = "AI Analysis", description = "AI-based anomaly analysis using OpenRouter API")
 public class AIController {
 
-    @Autowired
     private AnomalyRepository anomalyRepo;
+
+    public AIController(AnomalyRepository anomalyRepo){
+        this.anomalyRepo = anomalyRepo;
+    }
 
     private final RestTemplate restTemplate = new RestTemplate();
 

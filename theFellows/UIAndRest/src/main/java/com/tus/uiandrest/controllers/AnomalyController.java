@@ -23,6 +23,10 @@ public class AnomalyController {
     @Autowired
     private AnomalyRepository anomalyRepo;
 
+    public AnomalyController(AnomalyRepository anomalyRepo){
+        this.anomalyRepo = anomalyRepo;
+    }
+
     @Operation(summary = "Get all anomalies")
     @ApiResponse(responseCode = "200", description = "OK")
     @GetMapping

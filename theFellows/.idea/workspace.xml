@@ -6,10 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/dto/AnomalyDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/AnomalyDTOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/dto/TrafficDataDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/TrafficDataDTOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/entity/AnomalyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/AnomalyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/entity/TrafficDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/TrafficDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/kafka/TrafficDataConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/main/java/com/tus/anomalydetection/kafka/TrafficDataConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/AnomalyDetectionApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/config/KafkaConsumerConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/config/KafkaConsumerConfigTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/kafka/TrafficDataConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/kafka/TrafficDataConsumerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/kafka/TrafficDataProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/kafka/TrafficDataProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AnomalyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AnomalyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/AnomalyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/AnomalyDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/dto/TrafficDataDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/Anomaly.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/Anomaly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/AnomalyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/AnomalyType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tus/common/entity/TrafficData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +221,10 @@
       <item itemvalue="JUnit.com.tus.uiandrest.controller in UIAndRest" />
       <item itemvalue="JUnit.All in TrafficSimulator (1)" />
       <item itemvalue="JUnit.All in TrafficSimulator" />
+      <item itemvalue="Spring Boot.AnomalyDetectionApplication" />
+      <item itemvalue="Spring Boot.CommonApplication" />
+      <item itemvalue="Spring Boot.TrafficSimulatorApplication" />
+      <item itemvalue="Spring Boot.UiAndRestApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -264,18 +276,22 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/theFellows$All_in_theFellows.ic" NAME="All in theFellows Coverage Results" MODIFIED="1749042822755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator__2_.ic" NAME="All in TrafficSimulator (2) Coverage Results" MODIFIED="1749121970035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator__1_.ic" NAME="All in TrafficSimulator (1) Coverage Results" MODIFIED="1749119914074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection__1_.ic" NAME="All in AnomalyDetection (1) Coverage Results" MODIFIED="1749119869647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection.ic" NAME="All in AnomalyDetection Coverage Results" MODIFIED="1749119332918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/theFellows$com_tus_anomalydetection_in_AnomalyDetection.ic" NAME="com.tus.anomalydetection in AnomalyDetection Coverage Results" MODIFIED="1749122717683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.tus.anomalydetection.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator.ic" NAME="All in TrafficSimulator Coverage Results" MODIFIED="1749119889505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_UIAndRest__1_.ic" NAME="All in UIAndRest (1) Coverage Results" MODIFIED="1749065331405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/theFellows$All_in_common.ic" NAME="All in common Coverage Results" MODIFIED="1749122621556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/theFellows$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1749119864219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_UIAndRest.ic" NAME="All in UIAndRest Coverage Results" MODIFIED="1749123373188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_theFellows__2_.ic" NAME="All in theFellows (2) Coverage Results" MODIFIED="1749059191163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator.ic" NAME="All in TrafficSimulator Coverage Results" MODIFIED="1749123360213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection__1_.ic" NAME="All in AnomalyDetection (1) Coverage Results" MODIFIED="1749119238897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/theFellows$com_tus_uiandrest_controller_in_UIAndRest.ic" NAME="com.tus.uiandrest.controller in UIAndRest Coverage Results" MODIFIED="1749120016364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.tus.uiandrest.controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/theFellows$All_in_theFellows.ic" NAME="All in theFellows Coverage Results" MODIFIED="1749042822755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection.ic" NAME="All in AnomalyDetection Coverage Results" MODIFIED="1749123342830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$com_tus_anomalydetection_in_AnomalyDetection.ic" NAME="com.tus.anomalydetection in AnomalyDetection Coverage Results" MODIFIED="1749122717683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.tus.anomalydetection.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/theFellows$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1749119864219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
