@@ -11,7 +11,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.tus.anomalydetection.kafka.TrafficDataConsumer;
 import com.tus.anomalydetection.repository.TrafficDataRepository;
 import com.tus.common.dto.TrafficDataDTO;
 import com.tus.common.entity.TrafficData;
@@ -42,6 +41,5 @@ class TrafficDataConsumerTest {
         consumer.consumeTrafficData(dto);
 
         verify(repository, times(1)).save(any(TrafficData.class));
-        //verify(anomalyService, times(1)).checkForAnomaly(any(TrafficData.class));
     }
 }

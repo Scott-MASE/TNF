@@ -1,6 +1,6 @@
 package com.tus.common.dto;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

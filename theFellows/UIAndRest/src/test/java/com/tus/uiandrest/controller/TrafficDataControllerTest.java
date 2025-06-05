@@ -43,23 +43,6 @@ class TrafficDataControllerTest {
      mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
  }
 
- /*@Test
- public void testSendTraffic() throws Exception {
-     TrafficDataDTO dto = new TrafficDataDTO();
-     dto.setNodeId(1);
-     dto.setNetworkId(2);
-     dto.setTrafficVolume(500.0);
-     dto.setTimestamp(LocalDateTime.now());
-
-     ObjectMapper objectMapper = new ObjectMapper();
-     objectMapper.registerModule(new JavaTimeModule());
-     objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-     
-     mockMvc.perform(post("/api/traffic")
-             .contentType(MediaType.APPLICATION_JSON)
-             .content(new ObjectMapper().writeValueAsString(dto)))
-             .andExpect(status().isAccepted());
- }*/
 
  @Test
  void testGetAllTraffic() throws Exception {

@@ -1,6 +1,5 @@
 package com.tus.anomalydetection.config;
 
-import com.tus.anomalydetection.config.KafkaConsumerConfig;
 import com.tus.common.dto.TrafficDataDTO;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;

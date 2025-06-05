@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/dto/AnomalyDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/AnomalyDTOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/dto/TrafficDataDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/TrafficDataDTOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/entity/AnomalyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/AnomalyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/entity/TrafficDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/TrafficDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AIController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,46 +52,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.All in AnomalyDetection.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.All in TrafficSimulator.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.All in UIAndRest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in theFellows (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in theFellows.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.AnomalyDetectionApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.NetworkDashboardTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.NetworkDashboardTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.NetworkDashboardTest.testApplyFiltersButton.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrafficSimulatorApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UiAndRestApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AnomalyDetectionApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.AnomalyDetectionApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.TrafficSimulatorApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UiAndRestApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/A00283448/Documents/GitHub/TNF/theFellows&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in AnomalyDetection.executor": "Coverage",
+    "JUnit.All in TrafficSimulator.executor": "Coverage",
+    "JUnit.All in UIAndRest.executor": "Run",
+    "JUnit.All in theFellows (1).executor": "Run",
+    "JUnit.All in theFellows.executor": "Coverage",
+    "JUnit.AnomalyDetectionApplicationTests.executor": "Run",
+    "JUnit.AnomalyDetectionServiceTest.testTrafficVolumeAnomalyDetection.executor": "Run",
+    "JUnit.NetworkDashboardTest (1).executor": "Run",
+    "JUnit.NetworkDashboardTest.executor": "Run",
+    "JUnit.NetworkDashboardTest.testApplyFiltersButton.executor": "Run",
+    "JUnit.TrafficDataProducerTest.testSendVariousTrafficVolumes.executor": "Run",
+    "JUnit.TrafficSimulatorApplicationTests.executor": "Run",
+    "JUnit.UiAndRestApplicationTests.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AnomalyDetectionApplication (1).executor": "Run",
+    "Spring Boot.AnomalyDetectionApplication.executor": "Run",
+    "Spring Boot.TrafficSimulatorApplication.executor": "Run",
+    "Spring Boot.UiAndRestApplication.executor": "Run",
+    "git-widget-placeholder": "sonar__fixes",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/A00283448/Documents/GitHub/TNF/theFellows",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/UIAndRest/src/test/resources" />
@@ -126,27 +124,43 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.tus.anomalydetection in AnomalyDetection">
-    <configuration name="All in TrafficSimulator (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrafficSimulator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in TrafficSimulator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrafficSimulator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TrafficDataProducerTest.testSendVariousTrafficVolumes">
     <configuration name="All in common" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="common" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnomalyDetectionServiceTest.testTrafficVolumeAnomalyDetection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AnomalyDetection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tus.anomalydetection.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tus.anomalydetection.service" />
+      <option name="MAIN_CLASS_NAME" value="com.tus.anomalydetection.service.AnomalyDetectionServiceTest" />
+      <option name="METHOD_NAME" value="testTrafficVolumeAnomalyDetection(double,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrafficDataProducerTest.testSendVariousTrafficVolumes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrafficSimulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tus.trafficsimulator.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tus.trafficsimulator.service" />
+      <option name="MAIN_CLASS_NAME" value="com.tus.trafficsimulator.service.TrafficDataProducerTest" />
+      <option name="METHOD_NAME" value="testSendVariousTrafficVolumes(double)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -208,19 +222,23 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.AnomalyDetectionServiceTest.testTrafficVolumeAnomalyDetection" />
+      <item itemvalue="JUnit.TrafficDataProducerTest.testSendVariousTrafficVolumes" />
       <item itemvalue="JUnit.All in common" />
       <item itemvalue="JUnit.com.tus.anomalydetection in AnomalyDetection" />
       <item itemvalue="JUnit.com.tus.uiandrest.controller in UIAndRest" />
-      <item itemvalue="JUnit.All in TrafficSimulator (1)" />
-      <item itemvalue="JUnit.All in TrafficSimulator" />
+      <item itemvalue="Spring Boot.AnomalyDetectionApplication" />
+      <item itemvalue="Spring Boot.CommonApplication" />
+      <item itemvalue="Spring Boot.TrafficSimulatorApplication" />
+      <item itemvalue="Spring Boot.UiAndRestApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrafficDataProducerTest.testSendVariousTrafficVolumes" />
+        <item itemvalue="JUnit.AnomalyDetectionServiceTest.testTrafficVolumeAnomalyDetection" />
         <item itemvalue="JUnit.com.tus.anomalydetection in AnomalyDetection" />
         <item itemvalue="JUnit.All in common" />
         <item itemvalue="JUnit.com.tus.uiandrest.controller in UIAndRest" />
-        <item itemvalue="JUnit.All in TrafficSimulator (1)" />
-        <item itemvalue="JUnit.All in TrafficSimulator" />
       </list>
     </recent_temporary>
   </component>
@@ -264,18 +282,22 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/theFellows$All_in_theFellows.ic" NAME="All in theFellows Coverage Results" MODIFIED="1749042822755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator__2_.ic" NAME="All in TrafficSimulator (2) Coverage Results" MODIFIED="1749121970035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator__1_.ic" NAME="All in TrafficSimulator (1) Coverage Results" MODIFIED="1749119914074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection__1_.ic" NAME="All in AnomalyDetection (1) Coverage Results" MODIFIED="1749119869647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection.ic" NAME="All in AnomalyDetection Coverage Results" MODIFIED="1749119332918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/theFellows$com_tus_anomalydetection_in_AnomalyDetection.ic" NAME="com.tus.anomalydetection in AnomalyDetection Coverage Results" MODIFIED="1749122717683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.tus.anomalydetection.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator.ic" NAME="All in TrafficSimulator Coverage Results" MODIFIED="1749119889505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_UIAndRest__1_.ic" NAME="All in UIAndRest (1) Coverage Results" MODIFIED="1749065331405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/theFellows$All_in_common.ic" NAME="All in common Coverage Results" MODIFIED="1749122621556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/theFellows$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1749119864219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_UIAndRest.ic" NAME="All in UIAndRest Coverage Results" MODIFIED="1749123373188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_theFellows__2_.ic" NAME="All in theFellows (2) Coverage Results" MODIFIED="1749059191163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_TrafficSimulator.ic" NAME="All in TrafficSimulator Coverage Results" MODIFIED="1749123360213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection__1_.ic" NAME="All in AnomalyDetection (1) Coverage Results" MODIFIED="1749119238897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/theFellows$com_tus_uiandrest_controller_in_UIAndRest.ic" NAME="com.tus.uiandrest.controller in UIAndRest Coverage Results" MODIFIED="1749120016364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.tus.uiandrest.controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/theFellows$All_in_theFellows.ic" NAME="All in theFellows Coverage Results" MODIFIED="1749042822755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$All_in_AnomalyDetection.ic" NAME="All in AnomalyDetection Coverage Results" MODIFIED="1749123342830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/theFellows$com_tus_anomalydetection_in_AnomalyDetection.ic" NAME="com.tus.anomalydetection in AnomalyDetection Coverage Results" MODIFIED="1749122717683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.tus.anomalydetection.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/theFellows$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1749119864219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

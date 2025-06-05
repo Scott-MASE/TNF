@@ -5,7 +5,6 @@ import com.tus.uiandrest.repositories.AnomalyRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -18,12 +17,15 @@ import java.util.Map;
 @Tag(name = "AI Analysis", description = "AI-based anomaly analysis using OpenRouter API")
 public class AIController {
 
-    @Autowired
     private AnomalyRepository anomalyRepo;
+
+    public AIController(AnomalyRepository anomalyRepo){
+        this.anomalyRepo = anomalyRepo;
+    }
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    private static final String OPENROUTER_API_KEY = "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"; // 50 requests per day only
+    private static final String OPENROUTER_API_KEY = "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"; // 50 requests per day only
     private static final String OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
     @Operation(summary = "Get AI analysis of the latest 20 anomalies")
@@ -51,13 +53,14 @@ public class AIController {
 
         for (Anomaly anomaly : latestAnomalies) {
             prompt.append(String.format(
-                    "• [%s] Node %d (Network %d): %s (Traffic: %.2f Mbps)\n",
+                    "• [%s] Node %d (Network %d): %s (Traffic: %.2f Mbps)%n",
                     anomaly.getTimestamp(),
                     anomaly.getNodeId(),
                     anomaly.getNetworkId(),
                     anomaly.getAnomalyType(),
                     anomaly.getTrafficVolume()
             ));
+
         }
 
 
