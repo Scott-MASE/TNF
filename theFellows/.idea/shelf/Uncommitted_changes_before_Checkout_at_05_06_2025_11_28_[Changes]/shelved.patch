@@ -1,0 +1,100 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -113,8 +113,8 @@
+       </set>
+     </option>
+   </component>
+-  <component name="RunManager" selected="JUnit.All in UIAndRest">
+-    <configuration name="All in AnomalyDetection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="JUnit.All in AnomalyDetection (1)">
++    <configuration name="All in AnomalyDetection (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="AnomalyDetection" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="TEST_OBJECT" value="package" />
+@@ -122,31 +122,31 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="All in TrafficSimulator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="TrafficSimulator" />
++    <configuration name="All in AnomalyDetection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="AnomalyDetection" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="TEST_OBJECT" value="package" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="All in UIAndRest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="UIAndRest" />
++    <configuration name="All in TrafficSimulator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="TrafficSimulator" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="TEST_OBJECT" value="package" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="All in theFellows (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="theFellows" />
++    <configuration name="All in UIAndRest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="UIAndRest" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="TEST_OBJECT" value="package" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="All in theFellows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="All in theFellows (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="theFellows" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="TEST_OBJECT" value="package" />
+@@ -183,23 +183,19 @@
+       </method>
+     </configuration>
+     <list>
++      <item itemvalue="JUnit.All in AnomalyDetection (1)" />
+       <item itemvalue="JUnit.All in AnomalyDetection" />
+       <item itemvalue="JUnit.All in TrafficSimulator" />
+       <item itemvalue="JUnit.All in UIAndRest" />
+-      <item itemvalue="JUnit.All in theFellows" />
+       <item itemvalue="JUnit.All in theFellows (1)" />
+-      <item itemvalue="Spring Boot.AnomalyDetectionApplication" />
+-      <item itemvalue="Spring Boot.CommonApplication" />
+-      <item itemvalue="Spring Boot.TrafficSimulatorApplication" />
+-      <item itemvalue="Spring Boot.UiAndRestApplication" />
+     </list>
+     <recent_temporary>
+       <list>
++        <item itemvalue="JUnit.All in AnomalyDetection (1)" />
+         <item itemvalue="JUnit.All in UIAndRest" />
+         <item itemvalue="JUnit.All in theFellows (1)" />
+         <item itemvalue="JUnit.All in TrafficSimulator" />
+         <item itemvalue="JUnit.All in AnomalyDetection" />
+-        <item itemvalue="JUnit.All in theFellows" />
+       </list>
+     </recent_temporary>
+   </component>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -9,5 +9,5 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="homebrew-21" project-jdk-type="JavaSDK" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="homebrew-21" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
