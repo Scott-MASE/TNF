@@ -28,4 +28,4 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: openrouter-secret
-                  key: api-key
+                  key: OPENROUTER_API_KEY
