@@ -25,7 +25,7 @@ public class AIController {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    private static final String OPENROUTER_API_KEY = "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"; // 50 requests per day only
+    private static final String OPENROUTER_API_KEY = "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"; // 50 requests per day only
     private static final String OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
     @Operation(summary = "Get AI analysis of the latest 20 anomalies")
