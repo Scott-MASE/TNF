@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b3f50b11-8555-4731-bbbf-e0d9e3c414f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/kafka/TrafficDataConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/kafka/TrafficDataConsumerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/AnomalyDetectionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnomalyDetection/src/test/java/com/tus/anomalydetection/service/AnomalyDetectionServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/main/java/com/tus/trafficsimulator/scheduler/ScheduledTrafficSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/test/java/com/tus/trafficsimulator/TrafficSimulatorApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrafficSimulator/src/test/java/com/tus/trafficsimulator/service/TrafficDataProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficSimulator/src/test/java/com/tus/trafficsimulator/service/TrafficDataProducerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AnomalyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/AnomalyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/TrafficDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/main/java/com/tus/uiandrest/controllers/TrafficDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIAndRest/src/test/java/com/tus/uiandrest/controller/AIControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIAndRest/src/test/java/com/tus/uiandrest/controller/AIControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +68,7 @@
     "JUnit.NetworkDashboardTest (1).executor": "Run",
     "JUnit.NetworkDashboardTest.executor": "Run",
     "JUnit.NetworkDashboardTest.testApplyFiltersButton.executor": "Run",
+    "JUnit.TrafficDataProducerTest.testSendVariousTrafficVolumes.executor": "Run",
     "JUnit.TrafficSimulatorApplicationTests.executor": "Run",
     "JUnit.UiAndRestApplicationTests.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
