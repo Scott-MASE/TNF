@@ -53,13 +53,14 @@ public class AIController {
 
         for (Anomaly anomaly : latestAnomalies) {
             prompt.append(String.format(
-                    "• [%s] Node %d (Network %d): %s (Traffic: %.2f Mbps)\n",
+                    "• [%s] Node %d (Network %d): %s (Traffic: %.2f Mbps)%n",
                     anomaly.getTimestamp(),
                     anomaly.getNodeId(),
                     anomaly.getNetworkId(),
                     anomaly.getAnomalyType(),
                     anomaly.getTrafficVolume()
             ));
+
         }
 
 

@@ -1,6 +1,5 @@
 package selenium;
 
-import com.tus.uiandrest.UiAndRestApplication;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +17,7 @@ import java.time.Duration;
         "server.port=9095"
 })
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class NetworkDashboardTest {
+class NetworkDashboardTest {
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -57,12 +56,6 @@ public class NetworkDashboardTest {
         Assertions.assertTrue(dashboardTab.getAttribute("class").contains("show"));
     }
 
-//    @Test
-//    void testCatWidgetLoadsImage() {
-//        WebElement catImage = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("catImage")));
-//        String src = catImage.getAttribute("src");
-//        Assertions.assertTrue(src.startsWith("https://") && src.contains("cdn2.thecatapi.com"), "Cat image did not load.");
-//    }
 
     @Test
     void testApplyFiltersButton() {
