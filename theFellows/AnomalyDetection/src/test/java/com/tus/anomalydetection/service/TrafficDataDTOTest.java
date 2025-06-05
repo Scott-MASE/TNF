@@ -1,4 +1,4 @@
-package dto;
+package com.tus.anomalydetection.service;
 
 import com.tus.common.dto.TrafficDataDTO;
 import org.junit.jupiter.api.Test;

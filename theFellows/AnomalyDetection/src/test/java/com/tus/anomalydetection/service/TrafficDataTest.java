@@ -1,4 +1,4 @@
-package entity;
+package com.tus.anomalydetection.service;
 
 import com.tus.common.entity.TrafficData;
 import org.junit.jupiter.api.Test;
