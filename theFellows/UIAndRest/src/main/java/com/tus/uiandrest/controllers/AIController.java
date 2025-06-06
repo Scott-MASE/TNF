@@ -35,6 +35,8 @@ public class AIController {
     @GetMapping("/analysis")
     public ResponseEntity<String> getAIAnalysis() {
         List<Anomaly> latestAnomalies = anomalyRepo.findTop20ByOrderByTimestampDesc();
+        System.out.println("Injected API KEY starts with: " + OPENROUTER_API_KEY.substring(0, 5));
+
 
         if (latestAnomalies.isEmpty()) {
             return ResponseEntity.ok("No anomaly data available for analysis.");
