@@ -5,6 +5,7 @@ import com.tus.uiandrest.repositories.AnomalyRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -25,7 +26,8 @@ public class AIController {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    private static final String OPENROUTER_API_KEY = System.getenv("OPENROUTER_API_KEY");
+    @Value("${OPENROUTER_API_KEY}")
+    private String OPENROUTER_API_KEY;
     private static final String OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
     @Operation(summary = "Get AI analysis of the latest 20 anomalies")
